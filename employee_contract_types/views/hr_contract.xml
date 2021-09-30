@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="hr_contract_view_form" model="ir.ui.view">
+        <field name="name">hr.contract.inherited.contract_type</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <field name="department_id" position="replace">
+                <field name="department_id" string="Área" />
+            </field>
+            <xpath expr="/form/sheet/group/group[2]" position="replace">
+                <group>
+                    <field name="calendar_mismatch" invisible="1"/>
+                    <field name="resource_calendar_id" string="Jornada laboral"/>
+                    <field name="project" string="Proyecto" />
+                    <field name="tipo_gasto" string="Tipo gasto" />
+                    <field name="nivel_del_cargo"/>
+                    <field name="contract_type_id"/>
+                </group>  
+            </xpath>
+            <xpath expr="//group[@name='yearly_advantages']" position="replace">
+                <group name="compensacion" string="Compensación">
+                    <label for="honorarios"/>
+                        <div class="o_row" name="wage">
+                            <field name="honorarios" widget='monetary'/>
+                            <span>/ mes</span>
+                        </div>
+                    <field name="grado_salarial" />
+                </group >
+                <group name="terminos" string="Términos del Contrato">
+                    <field name="date_start"/>
+                    <field name="first_contract_date" attrs="{'invisible': ['|', ('first_contract_date', '=', False), ('first_contract_date', '=', 'date_start')]}"/>
+                    <field name="date_end"/>
+                    <field name="fin_periodo_prueba" />
+                </group>  
+                <group string="Perfil del cargo y antigüedad">
+                    <field name="perfil_cargo" widget ="url"/>
+                    <label for="antiguedad"/>
+                        <div class="o_row">
+                            <field name="antiguedad"/>
+                            <span>/ años</span>
+                        </div>
+                </group>
+            </xpath>
+            <xpath expr="//page[@name='information']" position="after">
+                <page name="info_ban" string="Información bancaria">
+                    <group>
+                        <group>
+                            <field name="bank_id"/>
+                            <field name="banco"/>
+                        </group>
+                        <group>
+                            <field name="pais"/>
+                            <field name="tipo_decuenta"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='info_ban']" position="after">
+                <page name="inf_soc" string="Información seguridad social">
+                    <group string="Información seguridad social" name="inf_seg_soc">
+                        <group>
+                            <field name="arl"/>
+                            <field name="clase_riesgo"/>
+                            <field name="afc" />
+                        </group>
+                        <group>
+                            <field name="eps"/>
+                            <field name="afp"/>
+                            <field name="cs" />
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='other']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

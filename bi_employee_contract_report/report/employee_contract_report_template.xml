@@ -42,34 +42,26 @@
 								</h5>
 						    </center>  
 							<br/>
-						    <br/>
 							<br/>
 							<center>
 								<h3>
 									HACE CONSTAR<br/>
 								</h3>
 						    </center>
-							<br/>
-							<br/>
-							<center>
-								<h3>
-									HACE CONSTAR<br/>
-								</h3>
-						    </center>
-							<h6>
-								Que <span t-field="o.employee_id.name"/>, mayor de edad identificado(a) con cédula de
-                                ciudadania número 4514842, se encuentra vinculado(a) a la CORPORACION
+							<h5>
+								Que <span t-field="o.employee_id.name"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.identification_id"/>
+								número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
                                 UNIVERSITARIA MINUTO DE DIOS mediante contrato laboral a término indefinido desde
                                 el 23 de Febrero de 2015.
-							</h6>
+							</h5>
 							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
 							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
 						</p>
 						<br/>
 						<br/>
-					<h2 style="text-align:left"><strong>Employee Information</strong></h2>
-					<hr style="border-width: 1px; color: #990033; background-color: #990033;"></hr>
-					<table style="width: 1000px; height: 100px;" cellpadding="4">
+					<!--h2 style="text-align:left"><strong>Employee Information</strong></h2-->
+					<!--hr style="border-width: 1px; color: #990033; background-color: #990033;"></hr-->
+					<!--table style="width: 1000px; height: 100px;" cellpadding="4">
 						<tbody>
 							<tr>
 								<td style="width: 165.35px;"><b>Employee : </b></td>
@@ -84,7 +76,7 @@
 								<td style="width: 165.35px;"> <span t-field="o.company_id.name"/> </td>
 							</tr>
 						</tbody>
-					</table>
+					</table-->
 					<br/>
 
 					<h2 style="text-align:left"><strong>Contract Information</strong></h2>
