@@ -23,6 +23,21 @@ class HrEmployeePrivate(models.Model):
     
 class EmployeeFullName(models.Model):
     _inherit = 'hr.employee'
+    
+    @api.onchange('country_bornid')
+    def _onchange_country_id(self):
+        if self.country_id:
+            return {'domain': {'state_born_id': [('country_bornid', '=', self.country_bornid.id)]}}
+        else:
+            return {'domain': {'state_born_id': []}}
+ 
+    # Dependent picklist code to show city based on selected state antioquia -> medellin, copacabana,  etc..
+    @api.onchange('state_id')
+    def _onchange_state_id(self):
+        if self.state_id:
+            return {'domain': {'city_id': [('state_id', '=', self.state_id.id)]}}
+        else:
+            return {'domain': {'city_id': []}}
 
     emp_fname = fields.Char(string='Primer nombre', copy=True)
     emp_mname = fields.Char(string='Segundo nombre', copy=True)
@@ -258,20 +273,7 @@ class EmployeeFullName(models.Model):
             emp_name.name = (str(fname)+' '+str(mname)+' '+str(lname)+' '+str(slname)).title()
 
     # Dependent picklist code to show State based on selected Country colombia -> antioquia, cundinamarca,  etc..
-    @api.onchange('country_bornid')
-    def _onchange_country_id(self):
-        if self.country_id:
-            return {'domain': {'state_born_id': [('country_bornid', '=', self.country_bornid.id)]}}
-        else:
-            return {'domain': {'state_born_id': []}}
- 
-    # Dependent picklist code to show city based on selected state antioquia -> medellin, copacabana,  etc..
-    @api.onchange('state_id')
-    def _onchange_state_id(self):
-        if self.state_id:
-            return {'domain': {'city_id': [('state_id', '=', self.state_id.id)]}}
-        else:
-            return {'domain': {'city_id': []}}
+    
 
     # Show Hide State selection based on Country
     @api.depends('country_id')
