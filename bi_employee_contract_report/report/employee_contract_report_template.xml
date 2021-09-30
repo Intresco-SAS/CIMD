@@ -32,20 +32,36 @@
 			<div class="article">
 				<div class="page">
 						<p class='text-center' style="font-size:28px;">
-							<h3>
-								CORPORACION UNIVERSITARIA MINUTO DE DIOS<br/>
-								800.116.217-2<br/>
-								Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro<br/>
-							</h3>
+							<center>
+								<h3>
+									CORPORACION UNIVERSITARIA MINUTO DE DIOS<br/>
+									800.116.217-2<br/>
+								</h3>
+								<h5>
+									Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro<br/>
+								</h5>
+						    </center>  
 							<br/>
 						    <br/>
 							<br/>
+							<center>
+								<h3>
+									HACE CONSTAR<br/>
+								</h3>
+						    </center>
 							<br/>
-							<h1>
-								HACE CONSTAR<br/>
-							</h1>
 							<br/>
-							<br/>
+							<center>
+								<h3>
+									HACE CONSTAR<br/>
+								</h3>
+						    </center>
+							<h6>
+								Que <span t-field="o.employee_id.name"/>, mayor de edad identificado(a) con cédula de
+                                ciudadania número 4514842, se encuentra vinculado(a) a la CORPORACION
+                                UNIVERSITARIA MINUTO DE DIOS mediante contrato laboral a término indefinido desde
+                                el 23 de Febrero de 2015.
+							</h6>
 							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
 							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
 						</p>
