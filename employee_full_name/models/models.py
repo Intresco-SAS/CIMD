@@ -22,9 +22,11 @@ class EmployeeFullName(models.Model):
     _inherit = 'hr.employee'
     
     #colombia pordefecto en el campo country_id
-    @api.model
-    def _colombia(self):
-        return self.env['res.country'].search([('code', '=', 'CO')]).id
+    """@api.multi
+    def _get_country_name(self):
+        res = self.env['res.country'].search([('name','=','United Kingdom')])
+        #print res
+        return res"""
 
 
     emp_fname = fields.Char(string='Primer nombre', copy=True)
@@ -36,7 +38,7 @@ class EmployeeFullName(models.Model):
     doctype = fields.Selection([('12', 'Identity Card'),('13', 'Citizenship Card'),('21','Alien Registration Card'),('41','PEP')])
     validity = fields.Date(string='Validity to')
     expedition_date = fields.Date(string='Expedition date')
-    country_nacionalidad_id = fields.Many2one('res.country', string='Nacionalidad', help='Select Country', ondelete='restrict')
+    country_nacionalidad_id = fields.Many2one('res.country', string='Nacionalidad', help='Select Country', ondelete='restrict', default=lambda self: self.env['res.country'].browse([('name','=','United Kingdom')]))
     state_id = fields.Many2one("res.country.state", help='Enter State', ondelete='restrict', string='Departamento de expedicion')
     country_id = fields.Many2one('res.country', string='Country', help='Select Country', ondelete='restrict')    
     city_id = fields.Many2one('res.country.state.city', help='Enter City', string='Municipio de expedicion')
