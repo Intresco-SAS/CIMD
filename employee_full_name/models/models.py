@@ -20,6 +20,11 @@ class HrEmployeePrivate(models.Model):
     
 class EmployeeFullName(models.Model):
     _inherit = 'hr.employee'
+    
+    #colombia pordefecto en el campo country_id
+    @api.model
+    def _colombia(self):
+        return self.env['res.country'].search([('code', '=', 'CO')]).id
 
     emp_fname = fields.Char(string='Primer nombre', copy=True)
     emp_mname = fields.Char(string='Segundo nombre', copy=True)
@@ -185,9 +190,6 @@ class EmployeeFullName(models.Model):
     dep_eco_2 = fields.Selection([('1', 'Si'),('2', 'No')])
     #vegetariano-vegano = fields.Boolean()
 
-    #colombia pordefecto en el campo country_id
-    def _colombia(self):
-        return self.env['res.country'].search([('code', '=', 'CO')]).id
     '''def _colombia1(self):
         return self.env['res.country'].search([('code', '=', 'CO')]).id'''
 

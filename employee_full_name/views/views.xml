@@ -55,10 +55,10 @@
                             </group>
                             <group string="Citizenship">
                                 <field name="country_nacionalidad_id" options="{&quot;no_open&quot;: True, &quot;no_create&quot;: True}"/>
-                                <field name="doctype"/>
+                                <field name="doctype" string="Tipo de documento"/>
                                 <field name="identification_id" groups="hr.group_hr_user"/>
-                                <field name="sex"/>
-                                <field name="expedition_date"/>
+                                <field name="sex" string="Sexo"/>
+                                <field name="expedition_date" string="Fecha de expedición"/>
                                 <field name="country_id"  options="{'no_quick_create': True, 'no_create_edit' : True}" invisible="1"/>
                                 <field name="state_id" options="{'no_quick_create': True, 'no_create_edit' : True}" attrs="{'invisible':[('hide', '=', True)]}"/>
                                 <field name="city_id" attrs="{'invisible':[('hide', '=', True)]}"/>
