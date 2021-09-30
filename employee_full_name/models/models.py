@@ -255,12 +255,12 @@ class EmployeeFullName(models.Model):
             emp_name.name = (str(fname)+' '+str(mname)+' '+str(lname)+' '+str(slname)).title()
 
     # Dependent picklist code to show State based on selected Country colombia -> antioquia, cundinamarca,  etc..
-    @api.onchange('country_bornid')
+    @api.onchange('country_id')
     def _onchange_country_id(self):
-        if self.country_bornid:
-            return {'domain': {'state_born_id': [('country_bornid', '=', self.country_bornid.id)]}}
+        if self.country_id:
+            return {'domain': {'state_born_id': [('country_id', '=', self.country_id.name)]}}
         else:
-            return {'domain': {'state_id': []}}
+            return {'domain': {'state_born_id': []}}
  
     # Dependent picklist code to show city based on selected state antioquia -> medellin, copacabana,  etc..
     @api.onchange('state_id')
