@@ -16,6 +16,9 @@ class HrEmployeePrivate(models.Model):
     name = fields.Char('City Name', size=64, required=True)
     state_id = fields.Many2one("res.country.state", help='Enter State', ondelete='restrict', string='Departamento de expedicion')
     country_id = fields.Many2one('res.country', string='Country', help='Select Country', ondelete='restrict')
+    state_born_id = fields.Many2one("res.country.state",string='Departamento de nacimiento', help='Enter State', ondelete='restrict')
+    country_bornid = fields.Many2one('res.country', string='Pais de nacimeinto', help='Select Country', ondelete='restrict', default=lambda self: self.env['res.country'].browse([(49)]))
+    
 
     
 class EmployeeFullName(models.Model):
@@ -255,10 +258,10 @@ class EmployeeFullName(models.Model):
             emp_name.name = (str(fname)+' '+str(mname)+' '+str(lname)+' '+str(slname)).title()
 
     # Dependent picklist code to show State based on selected Country colombia -> antioquia, cundinamarca,  etc..
-    @api.onchange('country_id')
+    @api.onchange('country_bornid')
     def _onchange_country_id(self):
         if self.country_id:
-            return {'domain': {'state_born_id': [('country_id', '=', self.country_id.name)]}}
+            return {'domain': {'state_born_id': [('country_bornid', '=', self.country_bornid.id)]}}
         else:
             return {'domain': {'state_born_id': []}}
  
