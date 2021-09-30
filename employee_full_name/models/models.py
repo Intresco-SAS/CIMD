@@ -26,6 +26,7 @@ class EmployeeFullName(models.Model):
     def _colombia(self):
         return self.env['res.country'].search([('code', '=', 'CO')]).id
 
+
     emp_fname = fields.Char(string='Primer nombre', copy=True)
     emp_mname = fields.Char(string='Segundo nombre', copy=True)
     emp_lname = fields.Char(string='Primer apellido', copy=True)
@@ -35,7 +36,7 @@ class EmployeeFullName(models.Model):
     doctype = fields.Selection([('12', 'Identity Card'),('13', 'Citizenship Card'),('21','Alien Registration Card'),('41','PEP')])
     validity = fields.Date(string='Validity to')
     expedition_date = fields.Date(string='Expedition date')
-    country_nacionalidad_id = fields.Many2one('res.country', string='Nacionalidad', help='Select Country', ondelete='restrict' [('country_id.code','=','de')])
+    country_nacionalidad_id = fields.Many2one('res.country', string='Nacionalidad', help='Select Country', ondelete='restrict')
     state_id = fields.Many2one("res.country.state", help='Enter State', ondelete='restrict', string='Departamento de expedicion')
     country_id = fields.Many2one('res.country', string='Country', help='Select Country', ondelete='restrict')    
     city_id = fields.Many2one('res.country.state.city', help='Enter City', string='Municipio de expedicion')
