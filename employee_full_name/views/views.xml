@@ -183,7 +183,7 @@
                             <group>
                                 <field name="nivel_forma"/>
                                 <field name="insti_educ"/>
-                                <field name="estate_study"/>
+                                <field name="estate_study" string="Estado del estudio"/>
                             </group>
                             <group>
                                 <field name="nombre_forma"/>
