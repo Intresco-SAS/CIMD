@@ -49,7 +49,7 @@ class EmployeeFullName(models.Model):
     validity = fields.Date(string='Validity to')
     expedition_date = fields.Date(string='Expedition date')
     country_nacionalidad_id = fields.Many2one('res.country', string='Nacionalidad', 
-                                              help='Select Country', ondelete='restrict', default=lambda self: self.env['res.country'].browse([(95)]))
+                                              help='Select Country', ondelete='restrict', default=lambda self: self.env['res.country'].browse([(49)]))
     state_id = fields.Many2one("res.country.state", help='Enter State', ondelete='restrict', string='Departamento de expedicion')
     country_id = fields.Many2one('res.country', string='Country', help='Select Country', ondelete='restrict')    
     city_id = fields.Many2one('res.country.state.city', help='Enter City', string='Municipio de expedicion')
