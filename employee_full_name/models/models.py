@@ -260,7 +260,7 @@ class EmployeeFullName(models.Model):
         if self.country_bornid:
             return {'domain': {'state_born_id': [('country_bornid', '=', self.country_bornid.id)]}}
         else:
-            return {'domain': {'state_born_id': []}}
+            return {'domain': {'state_id': []}}
  
     # Dependent picklist code to show city based on selected state antioquia -> medellin, copacabana,  etc..
     @api.onchange('state_id')

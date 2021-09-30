@@ -94,7 +94,7 @@
                                 <field name="mascotas"/>
                     
                             </group>
-                            <group string="Marital Status">
+                            <group string="Estado civil">
                                 <field name="marital"/>
                                 <field name="spouse_complete_name" attrs="{'invisible': [('marital', 'not in', ['married', 'cohabitant'])]}" groups="hr.group_hr_user"/>
                                 <field name="spouse_birthdate" attrs="{'invisible': [('marital', 'not in', ['married', 'cohabitant'])]}" groups="hr.group_hr_user"/>
