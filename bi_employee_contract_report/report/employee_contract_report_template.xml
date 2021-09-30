@@ -52,12 +52,19 @@
 								Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
 								número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
                                 UNIVERSITARIA MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde
-                                <span t-field="o.date_start"/>.<br/>
+                                <span t-field="o.date_start"/>.
+								<br/>
+								<br/>
 								Para confirmación de la información registrada en la presente certificación, favor
-								comunicarse al 3136304472.<br/>
+								comunicarse al 3136304472.
+								<br/>
+								<br/>
 								Se expide en Bogotá D.C., a los 19 días del mes de Octubre de 2020.
 								Cordialmente,<br/>
 							</h5>
+							<br/>
+							<br/>
+							<br/>
 							<h3 style="font-weight: bold;">
 								ROSALBA LOPEZ GOMEZ
 							</h3>
@@ -76,6 +83,20 @@
 
 			<!--  Employee Contract Report Custom Footer -->
 			<div class="footer">
+				<table style="width: 1000px; height: 80px;" cellpadding="4">
+					<tbody>
+						<tr>
+							<td style="width: 165.35px; text-align:left;">Employee Signature : ___________________________</td>
+							<td style="width: 165.35px; text-align:right">Authorized Signature : _____________________________</td>
+						</tr>
+						<tr>
+							<td style="width: 165.35px; text-align:left;">Date : _______________________________________</td>
+							<td style="width: 165.35px; text-align:right">Date : __________________________________________</td>
+						</tr>
+					</tbody>
+				</table>
+				<br/>
+				
 				<div class="text-center">
 					<ul class="list-inline">
 						<li t-if="company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span class="o_force_ltr" t-field="company.phone"/></li>
@@ -90,7 +111,7 @@
 		</t>
 	</template>
 
-
+    
 	<template id="employee_contract_report_template">
 	<t t-call="web.html_container">
 		<t t-foreach="docs" t-as="o">
