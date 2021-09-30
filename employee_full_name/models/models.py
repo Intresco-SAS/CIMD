@@ -20,14 +20,6 @@ class HrEmployeePrivate(models.Model):
     
 class EmployeeFullName(models.Model):
     _inherit = 'hr.employee'
-    
-    #colombia pordefecto en el campo country_id
-    """@api.multi
-    def _get_country_name(self):
-        res = self.env['res.country'].search([('name','=','United Kingdom')])
-        #print res
-        return res"""
-
 
     emp_fname = fields.Char(string='Primer nombre', copy=True)
     emp_mname = fields.Char(string='Segundo nombre', copy=True)
@@ -49,28 +41,61 @@ class EmployeeFullName(models.Model):
     validity = fields.Date(string='Validity to')
     expedition_date = fields.Date(string='Expedition date')
     country_nacionalidad_id = fields.Many2one('res.country', string='Nacionalidad', 
-                                              help='Select Country', ondelete='restrict', default=lambda self: self.env['res.country'].browse([(49)]))
+                                              help='Select Country', ondelete='restrict', 
+                                              default=lambda self: self.env['res.country'].browse([(49)])
+                                              )
     state_id = fields.Many2one("res.country.state", help='Enter State', ondelete='restrict', string='Departamento de expedicion')
     country_id = fields.Many2one('res.country', string='Country', help='Select Country', ondelete='restrict')    
     city_id = fields.Many2one('res.country.state.city', help='Enter City', string='Municipio de expedicion')
     state_born_id = fields.Many2one("res.country.state",string='Departamento de nacimiento', help='Enter State', ondelete='restrict')
-    country_bornid = fields.Many2one('res.country', string='Pais de nacimeinto', help='Select Country', ondelete='restrict')    
+    country_bornid = fields.Many2one('res.country', string='Pais de nacimeinto', help='Select Country', ondelete='restrict', default=lambda self: self.env['res.country'].browse([(49)]))    
     city_born_id = fields.Many2one('res.country.state.city', string='Municipio de nacimiento', help='Enter City')
     city_re_id = fields.Many2one('res.country.state.city', string='Ciudad de residencia', help='Enter City')
     hide = fields.Boolean(string='Hide', compute="_compute_hide")
-    sex = fields.Selection([('hombre', 'Hombre'),('mujer', 'Mujer'),('otro','Otro')])
-    grupo_sangre = fields.Selection([('a', 'A'),('b', 'B'),('ab','AB'),('o','O')])
-    Tipo_pobl_vul= fields.Selection([('1', 'Niños, niñas, adolescentes'),('2', 'Adultos mayores'),('3','Poblaciones en situación de discapacidad'),
-                                    ('4','Grupos étnicos'),('5', 'Víctimas'),('6','Víctimas'),('7', 'Enfermedades huérfanas'),
-                                    ('8','Enfermedades catastróficas (Cáncer, VIH y renales)')])
+    sex = fields.Selection([('hombre', 'Hombre'),
+                            ('mujer', 'Mujer'),
+                            ('otro','Otro')]
+                           )
+    grupo_sangre = fields.Selection([('a', 'A'),
+                                     ('b', 'B'),
+                                     ('ab','AB'),
+                                     ('o','O')]
+                                    )
+    Tipo_pobl_vul= fields.Selection([('1', 'Niños, niñas, adolescentes'),
+                                     ('2', 'Adultos mayores'),
+                                     ('3','Poblaciones en situación de discapacidad'),
+                                     ('4','Grupos étnicos'),
+                                     ('5', 'Víctimas'),
+                                     ('6','Víctimas'),
+                                     ('7', 'Enfermedades huérfanas'),
+                                     ('8','Enfermedades catastróficas (Cáncer, VIH y renales)')]
+                                    )
     neighborhood = fields.Char(string='Barrio', copy=True)
-    estrato = fields.Selection([('1', '1'),('2', '2'),('3','3'),('4','4'),('5','5'),('6','6')])
-    tipo_vivienda = fields.Selection([('1', 'Vivienda de Interés Prioritario (VIP)'),('2', 'Vivienda de Interés Social (VIS)'),('3','Vivienda No Vis')])
+    estrato = fields.Selection([('1', '1'),
+                                ('2', '2'),
+                                ('3','3'),
+                                ('4','4'),
+                                ('5','5'),
+                                ('6','6')]
+                               )
+    tipo_vivienda = fields.Selection([('1', 'Vivienda de Interés Prioritario (VIP)'),
+                                      ('2', 'Vivienda de Interés Social (VIS)'),
+                                      ('3','Vivienda No Vis')]
+                                    )
     movil = fields.Char(string='Celular', copy=True)
     ###########################################################################
     name_f = fields.Char(string='Nombre completo', copy=True)
-    r_paren = fields.Selection([('1', 'Hij@'),('2', 'Padre'),('3','Herman@'),('4','4'),('5','5'),('6','6')])
-    doctype1 = fields.Selection([('12', 'Identity Card'),('13', 'Citizenship Card'),('21','Alien Registration Card'),('41','PEP')])
+    r_paren = fields.Selection([('1', 'Hij@'),('2', 'Padre'),
+                                ('3','Herman@'),
+                                ('4','4'),
+                                ('5','5'),
+                                ('6','6')]
+                               )
+    doctype1 = fields.Selection([('12', 'Identity Card'),
+                                 ('13', 'Citizenship Card'),
+                                 ('21','Alien Registration Card'),
+                                 ('41','PEP')]
+                                )
     num_iden = fields.Char(string='Numero de identificacion', copy=True)
     sex1 = fields.Selection([('hombre', 'Hombre'),('mujer', 'Mujer'),('otro','Otro')])
     birthday1 = fields.Date(string='Fecha de nacimiento')
@@ -230,12 +255,12 @@ class EmployeeFullName(models.Model):
             emp_name.name = (str(fname)+' '+str(mname)+' '+str(lname)+' '+str(slname)).title()
 
     # Dependent picklist code to show State based on selected Country colombia -> antioquia, cundinamarca,  etc..
-    @api.onchange('country_id')
+    @api.onchange('country_bornid')
     def _onchange_country_id(self):
-        if self.country_id:
-            return {'domain': {'state_id': [('country_id', '=', self.country_id.id)]}}
+        if self.country_bornid:
+            return {'domain': {'state_born_id': [('country_bornid', '=', self.country_bornid.id)]}}
         else:
-            return {'domain': {'state_id': []}}
+            return {'domain': {'state_born_id': []}}
  
     # Dependent picklist code to show city based on selected state antioquia -> medellin, copacabana,  etc..
     @api.onchange('state_id')
