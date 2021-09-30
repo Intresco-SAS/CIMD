@@ -26,8 +26,8 @@ class EmployeeFullName(models.Model):
     
     @api.onchange('country_bornid')
     def _onchange_country_id(self):
-        if self.country_id:
-            return {'domain': {'state_born_id': [('country_bornid', '=', self.country_bornid.id)]}}
+        if self.country_bornid:
+            return {'domain': {'state_born_id': [('country_id', '=', self.country_id.id)]}}
         else:
             return {'domain': {'state_born_id': []}}
  
