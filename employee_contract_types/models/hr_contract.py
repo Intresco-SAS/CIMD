@@ -26,8 +26,14 @@ class HrContract(models.Model):
                                       ('2', 'Corriente')
                                       ])
     arl = fields.Selection(string='ARL',selection=[('sura', 'SURA')], default='sura')
-    clase_riesgo = fields.Selection(string='Clase de riesgo',selection=[('1', 'Tipo I'),('2', 'Tipo II'),('3', 'Tipo III'),('4', 'Tipo IV'),('5', 'Tipo V')])
-    cs = fields.Selection(string='C',
+    clase_riesgo = fields.Selection(string='Clase de riesgo',selection=[('1', 'Tipo I'),
+                                                                        ('2', 'Tipo II'),
+                                                                        ('3', 'Tipo III'),
+                                                                        ('4', 'Tipo IV'),
+                                                                        ('5', 'Tipo V')
+                                                                        ]
+                                    )
+    cs = fields.Selection(string='Caja de compensacion',
                         selection=[('comfamiliarRisaralda', 'Comfamiliar Risaralda'),
                         ('compensar', 'Compensar'),
                         ('comfama', 'Comfama'),
