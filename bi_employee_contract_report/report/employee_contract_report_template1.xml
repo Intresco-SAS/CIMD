@@ -88,12 +88,7 @@
 
 			<!--  Employee Contract Report Custom Footer -->
 			<div class="footer">
-				<t> 
-					.footer {
-						border-top: none !important;
-					}
-				</t>
-				<div class="text-center">
+				<div class="text-center" style="border-top: 1px solid black">
 					<center>
 						Carrera 73A N° 81B-70 Tel.: (57-1) 2916520 Atención al cliente: 5933004. Línea Nacional: 018000936670 Fax: 4308140
 						Bogotá D.C., Colombia www.uniminuto.edu
