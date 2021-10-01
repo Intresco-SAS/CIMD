@@ -18,19 +18,14 @@
 
 			<!--  Employee Contract Report Custom Header -->
 			<div class="header">
-				<div class="o_boxed_header">
-				<div class="row mb8">
-					<div class="col-6">
-						<img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo"/>
+				<div>
+					<div>
+						<center>
+							<div>
+								<img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo"/>
+							</div>
+						</center>
 					</div>
-					<div class="col-6 text-right mb4">
-						<h4 class="mt0" t-field="company.report_header"/>
-						<div name="company_address" class="float-right mb4">
-							<span class="company_address" t-field="company.partner_id"
-								t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
-						</div>
-					</div>
-				</div>
 				</div>
 			</div>
 
@@ -95,14 +90,15 @@
 			<div class="footer">
 				<table style="width: 1000px; height: 80px;" cellpadding="4">
 					<tbody>
-						<tr>
-							<td style="width: 165.35px; text-align:left;">Employee Signature : ___________________________</td>
-							<td style="width: 165.35px; text-align:right">Authorized Signature : _____________________________</td>
-						</tr>
-						<tr>
-							<td style="width: 165.35px; text-align:left;">Date : _______________________________________</td>
-							<td style="width: 165.35px; text-align:right">Date : __________________________________________</td>
-						</tr>
+						<div class="text-center">
+							<ul class="list-inline">
+								<li t-if="company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span class="o_force_ltr" t-field="company.phone"/></li>
+								<li t-if="company.email" class="list-inline-item"><i class="fa fa-at" role="img" aria-label="Email" title="Email"/> <span t-field="company.email"/></li>
+								<li t-if="company.website" class="list-inline-item"><i class="fa fa-globe" role="img" aria-label="Website" title="Website"/> <span t-field="company.website"/></li>
+								<li t-if="company.vat" class="list-inline-item"><i class="fa fa-building-o" role="img" aria-label="Fiscal number"/><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
+							</ul>
+							<div t-field="company.report_footer"/>
+						</div>
 					</tbody>
 				</table>
 				<br/>
