@@ -56,8 +56,8 @@
 								<br/>
 								<br/>
 								Actualmente se encuentra desempeñando el cargo de COORDINADOR
-								COMUNICACIONES SEDE, con una asignación salarial mensual de <span t-esc="o.currency_id.amount_to_text(o.wage)" style="font-weight: bold;"/> 
-								DE PESOS <span t-field="o.wage"/>.
+								COMUNICACIONES SEDE, con una asignación salarial mensual de <span t-esc="o.amount_to_text(o.wage)" style="font-weight: bold;"/> 
+								<span t-field="o.wage"/>.
 								<br/>
 								<br/>
 								Para confirmación de la información registrada en la presente certificación, favor
