@@ -88,29 +88,16 @@
 
 			<!--  Employee Contract Report Custom Footer -->
 			<div class="footer">
-				<table style="width: 1000px; height: 80px;" cellpadding="4">
-					<tbody>
-						<div class="text-center">
-							<ul class="list-inline">
-								<li t-if="company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span class="o_force_ltr" t-field="company.phone"/></li>
-								<li t-if="company.email" class="list-inline-item"><i class="fa fa-at" role="img" aria-label="Email" title="Email"/> <span t-field="company.email"/></li>
-								<li t-if="company.website" class="list-inline-item"><i class="fa fa-globe" role="img" aria-label="Website" title="Website"/> <span t-field="company.website"/></li>
-								<li t-if="company.vat" class="list-inline-item"><i class="fa fa-building-o" role="img" aria-label="Fiscal number"/><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
-							</ul>
-							<div t-field="company.report_footer"/>
-						</div>
-					</tbody>
-				</table>
-				<br/>
-				
+				<t> 
+					.footer {
+						border-top: none !important;
+					}
+				</t>
 				<div class="text-center">
-					<ul class="list-inline">
-						<li t-if="company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span class="o_force_ltr" t-field="company.phone"/></li>
-						<li t-if="company.email" class="list-inline-item"><i class="fa fa-at" role="img" aria-label="Email" title="Email"/> <span t-field="company.email"/></li>
-						<li t-if="company.website" class="list-inline-item"><i class="fa fa-globe" role="img" aria-label="Website" title="Website"/> <span t-field="company.website"/></li>
-						<li t-if="company.vat" class="list-inline-item"><i class="fa fa-building-o" role="img" aria-label="Fiscal number"/><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
-					</ul>
-					<div t-field="company.report_footer"/>
+					<center>
+						Carrera 73A N° 81B-70 Tel.: (57-1) 2916520 Atención al cliente: 5933004. Línea Nacional: 018000936670 Fax: 4308140
+						Bogotá D.C., Colombia www.uniminuto.edu
+					</center>
 				</div>
 			</div>
 			<div style="page-break-before:always;"/>
