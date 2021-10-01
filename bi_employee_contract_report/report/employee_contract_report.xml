@@ -20,7 +20,7 @@
 	<!--  Employee Contract Report -->
 	<report
 		id="employee_contract_report_action"
-		string="Contract"
+		string="Certificado sin salario"
 		model="hr.contract"
 		report_type="qweb-pdf"
 		print_report_name = "object.name"
@@ -31,7 +31,7 @@
 
 	<report
 		id="employee_contract_report_action1"
-		string="Contract1"
+		string="Certificado con salario"
 		model="hr.contract"
 		report_type="qweb-pdf"
 		print_report_name = "object.name"
