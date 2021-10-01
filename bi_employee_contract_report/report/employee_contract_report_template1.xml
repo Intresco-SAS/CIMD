@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!--  Employee Contract Report Document -->
+	<template id="employee_contract_report_document1">
+		<t t-call="web.html_container">
+			<t t-set="o" t-value="o.with_context(lang=o.employee_id.user_id.lang)"/>
+		
+			<t t-if="not o and doc">
+				<t t-set="o" t-value="doc"/>
+			</t>
+			<t t-if="o and 'company_id' in o">
+				<t t-set="company" t-value="o.company_id"></t>
+			</t>
+			<t t-if="not o or not 'company_id' in o">
+				<t t-set="company" t-value="res_company"></t>
+			</t>
+
+			<!--  Employee Contract Report Custom Header -->
+			<div class="header">
+				<div>
+					<div>
+						<center>
+							<div>
+								<img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo"/>
+							</div>
+						</center>
+					</div>
+				</div>
+			</div>
+
+			<div class="article">
+				<div class="page">
+						<p class='text-center' style="font-size:28px;">
+							<center>
+								<h3>
+									CORPORACION UNIVERSITARIA MINUTO DE DIOS<br/>
+									800.116.217-2<br/>
+								</h3>
+								<h5>
+									Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro<br/>
+								</h5>
+						    </center>  
+							<br/>
+							<br/>
+							<center>
+								<h3>
+									HACE CONSTAR<br/>
+								</h3>
+						    </center>
+							<h5>
+								Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
+								número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
+                                UNIVERSITARIA MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde
+                                <span t-field="o.date_start"/>.
+								<br/>
+								<br/>
+								Para confirmación de la información registrada en la presente certificación, favor
+								comunicarse al 3136304472.
+								<br/>
+								<br/>
+								Se expide en Bogotá D.C., a los 19 días del mes de Octubre de 2020.
+								Cordialmente,<br/>
+							</h5>
+							<br/>
+							<br/>
+							<br/>
+							<h3 style="font-weight: bold;">
+								ROSALBA LOPEZ GOMEZ
+							</h3>
+							<h3>
+								VICERRECTOR REGIONAL
+							</h3>
+							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
+							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
+						</p>
+						<br/>
+						<br/>
+						<br/>
+					<br/>
+				</div>
+			</div>
+
+			<!--  Employee Contract Report Custom Footer -->
+			<div class="footer">
+				<table style="width: 1000px; height: 80px;" cellpadding="4">
+					<tbody>
+						<tr>
+							<td style="width: 165.35px; text-align:left;">Employee Signature : ___________________________</td>
+							<td style="width: 165.35px; text-align:right">Authorized Signature : _____________________________</td>
+						</tr>
+						<tr>
+							<td style="width: 165.35px; text-align:left;">Date : _______________________________________</td>
+							<td style="width: 165.35px; text-align:right">Date : __________________________________________</td>
+						</tr>
+					</tbody>
+				</table>
+				<br/>
+				
+				<div class="text-center">
+					<ul class="list-inline">
+						<li t-if="company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span class="o_force_ltr" t-field="company.phone"/></li>
+						<li t-if="company.email" class="list-inline-item"><i class="fa fa-at" role="img" aria-label="Email" title="Email"/> <span t-field="company.email"/></li>
+						<li t-if="company.website" class="list-inline-item"><i class="fa fa-globe" role="img" aria-label="Website" title="Website"/> <span t-field="company.website"/></li>
+						<li t-if="company.vat" class="list-inline-item"><i class="fa fa-building-o" role="img" aria-label="Fiscal number"/><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
+					</ul>
+					<div t-field="company.report_footer"/>
+				</div>
+			</div>
+			<div style="page-break-before:always;"/>
+		</t>
+	</template>
+
+    
+	<template id="employee_contract_report_template">
+	<t t-call="web.html_container">
+		<t t-foreach="docs" t-as="o">
+			<t t-call="bi_employee_contract_report.employee_contract_report_document" t-lang="o.employee_id.user_id.lang"/>
+			<field name="paperformat_id" ref="paperformat_export_payslip"/>
+		</t>
+	</t>
+	</template>
+
+</odoo>
