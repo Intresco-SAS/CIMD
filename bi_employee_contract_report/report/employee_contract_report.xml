@@ -29,7 +29,7 @@
 		menu="True"
 		/>
 
-		<report
+	<report
 		id="employee_contract_report_action1"
 		string="Contract1"
 		model="hr.contract"
