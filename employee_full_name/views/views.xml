@@ -99,7 +99,7 @@
                                 <field name="spouse_complete_name" attrs="{'invisible': [('marital', 'not in', ['married', 'cohabitant'])]}" groups="hr.group_hr_user"/>
                                 <field name="spouse_birthdate" attrs="{'invisible': [('marital', 'not in', ['married', 'cohabitant'])]}" groups="hr.group_hr_user"/>
                             </group>
-                            <group string="Tipo de población vulnerable">
+                            <group string="Población vulnerable">
                                 <field name="Tipo_pobl_vul" string="Tipo de población vulnerable"/>
                             </group>
                             <group string="Education" invisible="1">

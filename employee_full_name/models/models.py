@@ -52,8 +52,8 @@ class EmployeeFullName(models.Model):
                             ('bogota','Bogotá (Calle 81A # 73A-22 Minuto de Dios-Bogotá)')]
                            )
     doctype = fields.Selection([('12', 'Identity Card'),
-                                ('13', 'Citizenship Card'),
-                                ('21','Alien Registration Card'),
+                                ('13', 'Cedula de ciudadania'),
+                                ('21','Cedula de extrangeria'),
                                 ('41','PEP')]
                                )
     validity = fields.Date(string='Validity to')
@@ -112,16 +112,25 @@ class EmployeeFullName(models.Model):
     doctype1 = fields.Selection([('12', 'Identity Card'),
                                  ('13', 'Citizenship Card'),
                                  ('21','Alien Registration Card'),
-                                 ('41','PEP')]
-                                )
+                                 ('41','PEP')
+                                 ])
     num_iden = fields.Char(string='Numero de identificacion', copy=True)
-    sex1 = fields.Selection([('hombre', 'Hombre'),('mujer', 'Mujer'),('otro','Otro')])
+    sex1 = fields.Selection([('hombre', 'Hombre'),
+                             ('mujer', 'Mujer'),
+                             ('otro','Otro')
+                             ])
     birthday1 = fields.Date(string='Fecha de nacimiento')
     eps = fields.Selection([('1', 'SURA'),('2', 'Nueva')])
-    n_edu = fields.Selection([('1', 'Básica primaria'),('2', 'Básica secundaria')])
+    n_edu = fields.Selection([('1', 'Básica primaria'),
+                              ('2', 'Básica secundaria')
+                              ])
     ocu = fields.Char(string='Ocupación', copy=True)
-    vconcol = fields.Selection([('1', 'Si'),('2', 'No')])
-    dep_eco = fields.Selection([('1', 'Si'),('2', 'No')])
+    vconcol = fields.Selection([('1', 'Si'),
+                                ('2', 'No')
+                                ])
+    dep_eco = fields.Selection([('1', 'Si'),
+                                ('2', 'No')
+                                ])
     ###########################################################################
     nivel_forma = fields.Selection([('1', 'Nivel Técnico Profesional'),('2', 'Nivel Tecnológico'),('3','Nivel Profesional'),('4','Especializaciones'),('5','Maestrías'),('6','Doctorados')])
     nombre_forma = fields.Char(string='Nombre de formacion', copy=True)

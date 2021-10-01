@@ -81,33 +81,7 @@
 					<br/>
 				</div>
 			</div>
-
 			<!--  Employee Contract Report Custom Footer -->
-			<div class="footer">
-				<table style="width: 1000px; height: 80px;" cellpadding="4">
-					<tbody>
-						<tr>
-							<td style="width: 165.35px; text-align:left;">Employee Signature : ___________________________</td>
-							<td style="width: 165.35px; text-align:right">Authorized Signature : _____________________________</td>
-						</tr>
-						<tr>
-							<td style="width: 165.35px; text-align:left;">Date : _______________________________________</td>
-							<td style="width: 165.35px; text-align:right">Date : __________________________________________</td>
-						</tr>
-					</tbody>
-				</table>
-				<br/>
-				
-				<div class="text-center">
-					<ul class="list-inline">
-						<li t-if="company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span class="o_force_ltr" t-field="company.phone"/></li>
-						<li t-if="company.email" class="list-inline-item"><i class="fa fa-at" role="img" aria-label="Email" title="Email"/> <span t-field="company.email"/></li>
-						<li t-if="company.website" class="list-inline-item"><i class="fa fa-globe" role="img" aria-label="Website" title="Website"/> <span t-field="company.website"/></li>
-						<li t-if="company.vat" class="list-inline-item"><i class="fa fa-building-o" role="img" aria-label="Fiscal number"/><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
-					</ul>
-					<div t-field="company.report_footer"/>
-				</div>
-			</div>
 			<div class="footer">
 				<div class="text-center" style="border-top: 1px solid black">
 					<center>
@@ -116,11 +90,9 @@
 					</center>
 				</div>
 			</div>
-			<div style="page-break-before:always;"/>
 		</t>
 	</template>
 
-    
 	<template id="employee_contract_report_template">
 	<t t-call="web.html_container">
 		<t t-foreach="docs" t-as="o">

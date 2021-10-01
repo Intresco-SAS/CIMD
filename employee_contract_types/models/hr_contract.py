@@ -10,7 +10,11 @@ class HrContract(models.Model):
     project = fields.Many2one("project.project", string="proyecto")
     honorarios = fields.Float(string="Hononarios")
     grado_salarial = fields.Selection([('a', 'A')])
-    tipo_gasto = fields.Selection([('a', 'Costo directo'),('2', 'Costo indirecto'),('3', 'Gasto administrativo'),('4', 'Gasto ventas')])
+    tipo_gasto = fields.Selection([('a', 'Costo directo'),
+                                   ('2', 'Costo indirecto'),
+                                   ('3', 'Gasto administrativo'),
+                                   ('4', 'Gasto ventas')
+                                   ])
     fin_periodo_prueba = fields.Date(string="Fin del periodo de prueba")
     perfil_cargo = fields.Char(string="Perfil del cargo")
     antiguedad = fields.Integer(string="Antigüedad")
@@ -18,7 +22,9 @@ class HrContract(models.Model):
     metodo_pago = fields.Selection([('a', 'Transferencia bancaria (predterminado)')])
     pais = fields.Many2one('res.country', string='Pais', help='Select Country', ondelete='restrict') 
     banco =  fields.Many2one('res.partner.bank', string='Banco', help='Select bank', ondelete='restrict') 
-    tipo_decuenta = fields.Selection([('ahorros', 'Ahorros'),('2', 'Corriente')])
+    tipo_decuenta = fields.Selection([('ahorros', 'Ahorros'),
+                                      ('2', 'Corriente')
+                                      ])
     arl = fields.Selection(string='ARL',selection=[('sura', 'SURA')], default='sura')
     clase_riesgo = fields.Selection(string='Clase de riesgo',selection=[('1', 'Tipo I'),('2', 'Tipo II'),('3', 'Tipo III'),('4', 'Tipo IV'),('5', 'Tipo V')])
     cs = fields.Selection(string='C',
