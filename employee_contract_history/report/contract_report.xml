@@ -1,0 +1,61 @@
+<odoo>
+
+	<template id="report_hr_employee_contract">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="o">
+				<t t-call="employee_contract_history.external_layout">
+					<t t-set="o" t-value="o.with_context(lang=lang)" />
+					<div class="page">
+						<div class="text-center">
+		                	<strong>CORPORACION UNIVERSITARIA MINUTO DE DIOS <br/>800.116.217-2</strong>
+							<p>Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro</p>
+		                </div>
+		                <br/><br/>
+		                <div class="text-center">
+		                	<h5><strong>HACE CONSTAR</strong></h5>
+		                </div>
+		                <br/>
+		                <t t-set="active_contract" t-value="o.get_running_contract()"/>
+		                <p>
+		                	Que <strong><t t-esc="o.name.upper()"/></strong>, mayor de edad identificado(a) con cédula de ciudadanía número <t t-esc="o.identification_id or 'NIL' "/>, estuvo vinculado(a) a la <strong>CORPORACION UNIVERSITARIA MINUTO DE DIOS</strong> mediante contrato laboral a <span t-field="active_contract.structure_type_id"/> desde el <span t-field="active_contract.date_start"/> hasta el <span t-field="active_contract.date_end"/>.
+		                </p>
+		                <p>
+		                	Se encontraba desempeñando el cargo de <strong><span t-field="active_contract.job_id"/></strong>, con una asignación salarial mensual de <strong><t t-esc="o.get_num_to_words(active_contract.wage)"/> (<span t-field="active_contract.wage" widget="monetary"/>).</strong>
+		                </p>
+		                <p>
+		                	Igualmente, se relaciona la siguiente historia laboral:
+		                </p>
+		                <t t-set="other_contracts" t-value="o.get_other_contract()"/>
+		                <table class="table table-striped table-bordered">
+		                	<tr style="background:#bdbdbd" class="text-center">
+		                		<td><strong>CARGO</strong></td>
+		                		<td><strong>DESDE</strong></td>
+		                		<td><strong>HASTA</strong></td>
+		                	</tr>
+		                	<tr t-foreach="other_contracts" t-as="o_contract" class="text-center">
+		                		<td><span t-field="o_contract.job_id"/></td>
+		                		<td><span t-field="o_contract.date_start"/></td>
+		                		<td><span t-field="o_contract.date_end"/></td>
+		                	</tr>
+		                </table>
+		                <br/>
+		                <p>Se expide en Bogotá D.C., a los <t t-esc="o.get_current_date()"/></p>
+		                <br/>
+		                <p>Cordialmente,</p>
+		                <br/><br/><br/>
+		                <p><strong>ROSALBA LOPEZ GOMEZ</strong><br/>VICERRECTOR REGIONAL</p>
+					</div>
+				</t>
+			</t>
+		</t>
+	</template>
+	<record id="hr_employee_contract" model="ir.actions.report">
+        <field name="name">Contract History Report</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">employee_contract_history.report_hr_employee_contract</field>
+        <field name="report_file">employee_contract_history.report_hr_employee_contract</field>
+        <field name="binding_model_id" ref="hr.model_hr_employee"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>
