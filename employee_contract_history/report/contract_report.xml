@@ -50,7 +50,7 @@
 		</t>
 	</template>
 	<record id="hr_employee_contract" model="ir.actions.report">
-        <field name="name">Contract History Report</field>
+        <field name="name">Informe del historial de contratos</field>
         <field name="model">hr.employee</field>
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">employee_contract_history.report_hr_employee_contract</field>
