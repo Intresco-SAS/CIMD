@@ -136,7 +136,7 @@ class EmployeeFullName(models.Model):
     nombre_forma = fields.Char(string='Nombre de formacion', copy=True)
     insti_educ = fields.Char(string='Institución educativa', copy=True)
     date_grade = fields.Date(string='Fecha de Grado')
-    estate_study = fields.Selection[('1', '1'),('2', '2'),('3','3'),('4','4'),('5','5'),('6','6')])
+    estate_study = fields.Selection([('1', '1'),('2', '2'),('3','3'),('4','4'),('5','5'),('6','6')])
     num_horas = fields.Char(string='N° horas', copy=True)
     cargo_exp = fields.Char(string='Cargo', copy=True)
     empresa = fields.Char(string='Empresa', copy=True)
