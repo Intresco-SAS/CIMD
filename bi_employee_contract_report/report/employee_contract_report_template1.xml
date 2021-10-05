@@ -36,12 +36,12 @@
 								<br/>
 								<br/>
 								<h3>
-									CORPORACION INDUSTRIAl MINUTO DE DIOS<br/>
+									CORPORACION UNIVERSITARIA MINUTO DE DIOS<br/>
 									800.116.217-2<br/>
 								</h3>
-								<!--h5>
+								<h5>
 									Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro<br/>
-								</h5-->
+								</h5>
 						    </center>  
 							<br/>
 							<br/>
@@ -53,7 +53,7 @@
 							<h5>
 								Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
 								número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
-                                INDUSTRIAL MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde
+                                UNIVERSITARIA MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde
                                 <span t-field="o.date_start"/>.
 								<br/>
 								<br/>

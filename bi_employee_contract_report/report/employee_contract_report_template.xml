@@ -33,11 +33,9 @@
 				<div class="page">
 						<p class='text-center' style="font-size:28px;">
 							<center>
-								<br/>
-								<br/>
 								<h3>
-									CORPORACION INDUSTRIAL MINUTO DE DIOS<br/>
-									830.000.440<br/>
+									CORPORACION UNIVERSITARIA MINUTO DE DIOS<br/>
+									800.116.217-2<br/>
 								</h3>
 								<h5>
 									Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro<br/>
@@ -53,11 +51,9 @@
 							<h5>
 								Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
 								número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
-                                INDUSTRIAL MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde
+                                UNIVERSITARIA MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde
                                 <span t-field="o.date_start"/>.
 								<br/>
-								<br/>
-								Actualmente se encuentra desempeñando el cargo de <span t-field="o.job_id"/>,
 								<br/>
 								Para confirmación de la información registrada en la presente certificación, favor
 								comunicarse al 3136304472.
@@ -65,6 +61,7 @@
 								<br/>
 								Se expide en Bogotá D.C., a los 19 días del mes de Octubre de 2020.
 								Cordialmente,<br/>
+								(***$**)
 							</h5>
 							<br/>
 							<br/>
