@@ -18,80 +18,122 @@
 
 			<!--  Employee Contract Report Custom Header -->
 			<div class="header">
-				<div>
-					<div>
-						<center>
-							<div>
-								<img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo"/>
-							</div>
-						</center>
+				<div class="o_boxed_header">
+				<div class="row mb8">
+					<div class="col-6">
+						<img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo"/>
 					</div>
+					<div class="col-6 text-right mb4">
+						<h4 class="mt0" t-field="company.report_header"/>
+						<div name="company_address" class="float-right mb4">
+							<span class="company_address" t-field="company.partner_id"
+								t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+						</div>
+					</div>
+				</div>
 				</div>
 			</div>
 
 			<div class="article">
 				<div class="page">
-						<p class='text-center' style="font-size:28px;">
-							<center>
-								<h3>
-									CORPORACION UNIVERSITARIA MINUTO DE DIOS<br/>
-									800.116.217-2<br/>
-								</h3>
-								<h5>
-									Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro<br/>
-								</h5>
-						    </center>  
-							<br/>
-							<br/>
-							<center>
-								<h3>
-									HACE CONSTAR<br/>
-								</h3>
-						    </center>
-							<h5>
-								Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
-								número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
-                                UNIVERSITARIA MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde
-                                <span t-field="o.date_start"/>.
-								<br/>
-								<br/>
-								Para confirmación de la información registrada en la presente certificación, favor
-								comunicarse al 3136304472.
-								<br/>
-								<br/>
-								Se expide en Bogotá D.C., a los 19 días del mes de Octubre de 2020.
-								Cordialmente,<br/>
-								(***$**)
-							</h5>
-							<br/>
-							<br/>
-							<br/>
-							<h3 style="font-weight: bold;">
-								ROSALBA LOPEZ GOMEZ
-							</h3>
-							<h3>
-								VICERRECTOR REGIONAL
-							</h3>
-							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
-							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
-						</p>
-						<br/>
-						<br/>
-						<br/>
 					<br/>
+					<center>
+						<p class='text-center' style="font-size:28px;">
+							<h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1>
+						</p>
+						<br/><br/>
+					</center>
+
+					<h2 style="text-align:left"><strong>Employee Information</strong></h2>
+					<hr style="border-width: 1px; color: #990033; background-color: #990033;"></hr>
+					<table style="width: 1000px; height: 100px;" cellpadding="4">
+						<tbody>
+							<tr>
+								<td style="width: 165.35px;"><b>Employee : </b></td>
+								<td style="width: 165.35px;"> <span t-field="o.employee_id.name"/> </td>
+								<td style="width: 165.35px;"><b> Job Position : </b></td>
+								<td style="width: 165.35px;"> <span t-field="o.job_id.name"/> </td>
+							</tr>
+							<tr>
+								<td style="width: 165.35px;"><b> Department : </b></td>
+								<td style="width: 165.357px;"> <span t-field="o.department_id.name"/> </td>
+								<td style="width: 165.35px;"><b> Company : </b></td>
+								<td style="width: 165.35px;"> <span t-field="o.company_id.name"/> </td>
+							</tr>
+						</tbody>
+					</table>
+					<br/>
+
+					<h2 style="text-align:left"><strong>Contract Information</strong></h2>
+					<hr style="border-width: 1px; color: #990033; background-color: #990033;"></hr>
+					<table style="width: 1000px; height: 100px;" cellpadding="4">
+						<tbody>
+							<tr>
+								<td style="width: 165.35px;"><b>Start Date : </b></td>
+								<td style="width: 165.35px;"> <span t-field="o.date_start"/> </td>
+								<td style="width: 165.35px;"><b> End Date : </b></td>
+								<td style="width: 165.35px;"> <span t-field="o.date_end"/> </td>
+							</tr>
+							<tr>
+								<td style="width: 165.35px;"><b> First Contract Date : </b></td>
+								<td style="width: 165.357px;"> <span t-field="o.first_contract_date"/> </td>
+								<td style="width: 165.35px;"><b> Working Schedule : </b></td>
+								<td style="width: 165.35px;"> <span t-field="o.resource_calendar_id.name"/> </td>
+							</tr>
+						</tbody>
+					</table>
+					<br/>
+
+					<h2 style="text-align:left"><strong>Salary Information</strong></h2>
+					<hr style="border-width: 1px; color: #990033; background-color: #990033;"></hr>
+					<table style="width: 1000px; height: 100px;" cellpadding="4">
+						<tbody>
+							<tr>
+								<td style="width: 165.35px;"><b>Salary Structure Type : </b></td>
+								<td style="width: 165.35px;"> <span t-field="o.structure_type_id.name"/> </td>
+								<td style="width: 165.35px;"><b> Wage : </b></td>
+								<td style="width: 165.35px;"> <span t-field="o.wage"/> </td>
+							</tr>
+						</tbody>
+					</table>
+					<br/>
+				
+					<h2 style="text-align:left"><strong>Notes :</strong></h2>
+					<hr style="border-width: 1px; color: #990033; background-color: #990033;"></hr>
+					<span t-field="o.notes"/>
 				</div>
 			</div>
+
 			<!--  Employee Contract Report Custom Footer -->
 			<div class="footer">
-				<div class="text-center" style="border-top: 1px solid black">
-					<center>
-						Carrera 73A N° 81B-70 Tel.: (57-1) 2916520 Atención al cliente: 5933004. Línea Nacional: 018000936670 Fax: 4308140
-						Bogotá D.C., Colombia www.uniminuto.edu
-					</center>
+				<table style="width: 1000px; height: 80px;" cellpadding="4">
+					<tbody>
+						<tr>
+							<td style="width: 165.35px; text-align:left;">Employee Signature : ___________________________</td>
+							<td style="width: 165.35px; text-align:right">Authorized Signature : _____________________________</td>
+						</tr>
+						<tr>
+							<td style="width: 165.35px; text-align:left;">Date : _______________________________________</td>
+							<td style="width: 165.35px; text-align:right">Date : __________________________________________</td>
+						</tr>
+					</tbody>
+				</table>
+				<br/>
+				
+				<div class="text-center">
+					<ul class="list-inline">
+						<li t-if="company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span class="o_force_ltr" t-field="company.phone"/></li>
+						<li t-if="company.email" class="list-inline-item"><i class="fa fa-at" role="img" aria-label="Email" title="Email"/> <span t-field="company.email"/></li>
+						<li t-if="company.website" class="list-inline-item"><i class="fa fa-globe" role="img" aria-label="Website" title="Website"/> <span t-field="company.website"/></li>
+						<li t-if="company.vat" class="list-inline-item"><i class="fa fa-building-o" role="img" aria-label="Fiscal number"/><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
+					</ul>
+					<div t-field="company.report_footer"/>
 				</div>
 			</div>
+			<div style="page-break-before:always;"/>
 		</t>
 	</template>
+
 
 	<template id="employee_contract_report_template">
 	<t t-call="web.html_container">

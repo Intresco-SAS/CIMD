@@ -17,7 +17,6 @@
 	'data': [
 				'report/employee_contract_report.xml',
 				'report/employee_contract_report_template.xml',
-    			'report/employee_contract_report_template1.xml',
 			],
 	'demo': [],
 	'qweb': [],
