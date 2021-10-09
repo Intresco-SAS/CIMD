@@ -113,12 +113,14 @@ class EmployeeFullName(models.Model):
                                  ('13', 'Citizenship Card'),
                                  ('21','Alien Registration Card'),
                                  ('41','PEP')
-                                 ])
+                                 ]
+                                )
     num_iden = fields.Char(string='Numero de identificacion', copy=True)
     sex1 = fields.Selection([('hombre', 'Hombre'),
                              ('mujer', 'Mujer'),
                              ('otro','Otro')
-                             ])
+                             ]
+                            )
     birthday1 = fields.Date(string='Fecha de nacimiento')
     eps = fields.Selection([('1', 'SURA'),('2', 'Nueva')])
     n_edu = fields.Selection([('1', 'Básica primaria'),
@@ -136,7 +138,15 @@ class EmployeeFullName(models.Model):
     nombre_forma = fields.Char(string='Nombre de formacion', copy=True)
     insti_educ = fields.Char(string='Institución educativa', copy=True)
     date_grade = fields.Date(string='Fecha de Grado')
-    estate_study = fields.Selection([('1', '1'),('2', '2'),('3','3'),('4','4'),('5','5'),('6','6')])
+    estate_study = fields.Selection(string='Motivo de retiro',
+                                    selection=[('1', '1'),
+                                               ('2', '2'),
+                                               ('3','3'),
+                                               ('4','4'),
+                                               ('5','5'),
+                                               ('6','6')
+                                               ]
+                                    )
     num_horas = fields.Char(string='N° horas', copy=True)
     cargo_exp = fields.Char(string='Cargo', copy=True)
     empresa = fields.Char(string='Empresa', copy=True)
