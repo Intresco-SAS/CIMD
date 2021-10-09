@@ -2,7 +2,7 @@
 <odoo>
 
 	<!--  Employee Contract Report Document -->
-	<template id="employee_contract_report_document1">
+	<template id="employee_contract_report_template1">
 		<t t-call="web.html_container">
 			<t t-set="o" t-value="o.with_context(lang=o.employee_id.user_id.lang)"/>
 		
