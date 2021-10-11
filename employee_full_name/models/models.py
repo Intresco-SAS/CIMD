@@ -51,9 +51,10 @@ class EmployeeFullName(models.Model):
                             ('eje','Eje Cafetero (Km 11 Via Cerritos-Pereira)'),
                             ('bogota','Bogotá (Calle 81A # 73A-22 Minuto de Dios-Bogotá)')]
                            )
-    doctype = fields.Selection([('12', 'Identity Card'),
+    doctype = fields.Selection([('12', 'Tarjeta de identidad'),
                                 ('13', 'Cedula de ciudadania'),
                                 ('21','Cedula de extrangeria'),
+                                ('51','Visa de trabajo'),
                                 ('41','PEP')]
                                )
     validity = fields.Date(string='Validity to')
