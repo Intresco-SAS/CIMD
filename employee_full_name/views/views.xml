@@ -179,6 +179,10 @@
                         </group>
                     </page>
                 </xpath>
+                <xpath expr="//page[@name='marital']" position="replace">
+                    <field name="marital1"/>
+                </xpath>
+                
                 <!--xpath expr="//page[@name='inf_fa']" position="after">
                     <page name="exp" string="informacion academica"> 
                         <group string="Education">

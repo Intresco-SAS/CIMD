@@ -284,6 +284,14 @@ class EmployeeFullName(models.Model):
                                    ('9', 'Baile')
                                    ]
                                   )
+    marital1 = fields.Selection([
+        ('single', 'Single'),
+        ('married', 'Married'),
+        ('cohabitant', 'Union libre'),
+        ('widower', 'Widower'),
+        ('divorced', 'Divorced'),
+        #('union_libre', 'Union Libre'),
+    ], string='Marital Status', default='cohabitant', tracking=True)
 
     '''def _colombia1(self):
         return self.env['res.country'].search([('code', '=', 'CO')]).id'''
