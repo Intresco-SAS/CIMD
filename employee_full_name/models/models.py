@@ -273,7 +273,7 @@ class EmployeeFullName(models.Model):
                                     ('5', 'Vegano')
                                     ]
                                    )
-    pasatiempo = fields.Selection([('1', 'Lectura'),
+    pasatiempo1 = fields.Selection([('1', 'Lectura'),
                                    ('2', 'Escritura'),
                                    ('3', 'Tiempo familiar'),
                                    ('4', 'Deporte'),
