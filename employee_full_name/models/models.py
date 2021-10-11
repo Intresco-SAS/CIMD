@@ -266,6 +266,18 @@ class EmployeeFullName(models.Model):
     vconcol_2 = fields.Selection([('1', 'Si'),('2', 'No')])
     dep_eco_2 = fields.Selection([('1', 'Si'),('2', 'No')])
     #vegetariano-vegano = fields.Boolean()
+    tipo_alimen = fields.Selection([('1', 'Vegetariano'),('2', 'Ovolactovegetariano'),('3', 'Pescetariano'),('4', 'Pollotariano'),('5', 'Vegano')])
+    pasatiempo = fields.Selection([('1', 'Lectura'),
+                                   ('2', 'Escritura'),
+                                   ('3', 'Tiempo familiar'),
+                                   ('4', 'Deporte'),
+                                   ('5', 'Música'),
+                                   ('6', 'Viajes'),
+                                   ('7', 'Cocina'),
+                                   ('8', 'Teatro'),
+                                   ('9', 'Baile')
+                                   ]
+                                  )
 
     '''def _colombia1(self):
         return self.env['res.country'].search([('code', '=', 'CO')]).id'''
