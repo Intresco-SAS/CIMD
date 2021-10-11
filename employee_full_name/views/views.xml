@@ -177,7 +177,7 @@
                         </group>
                     </page>
                 </xpath>
-                <xpath expr="//page[@name='inf_fa']" position="after">
+                <!--xpath expr="//page[@name='inf_fa']" position="after">
                     <page name="exp" string="informacion academica"> 
                         <group string="Education">
                             <group>
@@ -222,8 +222,8 @@
                             </group>
                         </group>
                     </page>
-                </xpath>
-                <xpath expr="//page[@name='inf_fa']" position="before">
+                </xpath-->
+                <!--xpath expr="//page[@name='inf_fa']" position="before">
                     <page name="exp" string="Experiencia laboral"> 
                         <group string="Experiencia laboral">
                             <group>
@@ -280,7 +280,7 @@
                             </group>
                         </group>
                     </page>
-                </xpath>
+                </xpath-->
             </field>
         </record>
     </data>

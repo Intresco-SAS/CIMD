@@ -96,9 +96,9 @@ class EmployeeFullName(models.Model):
                                 ('5','5'),
                                 ('6','6')]
                                )
-    tipo_vivienda = fields.Selection([('1', 'Vivienda de Interés Prioritario (VIP)'),
-                                      ('2', 'Vivienda de Interés Social (VIS)'),
-                                      ('3','Vivienda No Vis')]
+    tipo_vivienda = fields.Selection([('1', 'Propia'),
+                                      ('2', 'Familiar'),
+                                      ('3','En arriendo')]
                                     )
     movil = fields.Char(string='Celular', copy=True)
     ###########################################################################
