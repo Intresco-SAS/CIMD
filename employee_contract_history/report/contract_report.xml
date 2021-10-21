@@ -8,7 +8,7 @@
 					<div class="page">
 						<div class="text-center">
 		                	<strong>CORPORACION UNIVERSITARIA MINUTO DE DIOS <br/>800.116.217-2</strong>
-							<p>Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro</p>
+							<!--p>Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro</p-->
 		                </div>
 		                <br/><br/>
 		                <div class="text-center">
@@ -17,7 +17,7 @@
 		                <br/>
 		                <t t-set="active_contract" t-value="o.get_running_contract()"/>
 		                <p>
-		                	Que <strong><t t-esc="o.name.upper()"/></strong>, mayor de edad identificado(a) con cédula de ciudadanía número <t t-esc="o.identification_id or 'NIL' "/>, estuvo vinculado(a) a la <strong>CORPORACION UNIVERSITARIA MINUTO DE DIOS</strong> mediante contrato laboral a <span t-field="active_contract.structure_type_id"/> desde el <span t-field="active_contract.date_start"/> hasta el <span t-field="active_contract.date_end"/>.
+		                	Que <strong><t t-esc="o.name.upper()"/></strong>, mayor de edad identificado(a) con cédula de ciudadanía número <t t-esc="o.identification_id or 'NIL' "/>, estuvo vinculado(a) a la <strong>CORPORACION INDUSTRIAL MINUTO DE DIOS</strong> mediante contrato laboral a <span t-field="active_contract.structure_type_id"/> desde el <span t-field="active_contract.date_start"/> hasta el <span t-field="active_contract.date_end"/>.
 		                </p>
 		                <p>
 		                	Se encontraba desempeñando el cargo de <strong><span t-field="active_contract.job_id"/></strong>, con una asignación salarial mensual de <strong><t t-esc="o.get_num_to_words(active_contract.wage)"/> (<span t-field="active_contract.wage" widget="monetary"/>).</strong>
