@@ -7,7 +7,7 @@
 					<t t-set="o" t-value="o.with_context(lang=lang)" />
 					<div class="page">
 						<div class="text-center">
-		                	<strong>CORPORACION UNIVERSITARIA MINUTO DE DIOS <br/>800.116.217-2</strong>
+		                	<strong>CORPORACION INDUSTRIAL MINUTO DE DIOS <br/>830000440-9</strong>
 							<!--p>Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro</p-->
 		                </div>
 		                <br/><br/>

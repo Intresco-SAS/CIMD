@@ -34,7 +34,7 @@
                     <attribute name="invisible">True</attribute>
                </xpath-->
                <xpath expr="//page[@name='personal_information']" position="replace">
-                    <page string="Informacion personal"> 
+                    <page string="Información personal"> 
                         <group>
                             <group string="Información de contacto">
                                 <field name="address_home_id" string="Dirección de residencia"/>
@@ -74,7 +74,7 @@
                             </group>
                             <group string="Permiso de trabajo" name="work_permit">
                                 <field name="visa_no" invisible="1"/>
-                                <field name="validity" attrs="{'invisible':[('doctype','!=','41')]}"/>
+                                <field name="validity" string="Valido hasta"  attrs="{'invisible':[('doctype','!=','41')]}"/>
                                 <field name="permit_no" invisible="1"/>
                                 <field name="visa_expire" invisible="1"/>
                             </group>
@@ -82,7 +82,7 @@
                             <!--group string="Dependant">
                                 <field name="children"/>
                             </group-->
-                            <group string="Emergency">
+                            <group string="Emergencia">
                                 <field name="emergency_contact"/>
                                 <field name="emergency_phone" class="o_force_ltr"/>
                                 <field name="grupo_sangre"/>
@@ -93,8 +93,7 @@
                                 <field name="voluntariados_asociaciones"/>
                                 <field name="mascotas"/>
                                 <field name="tipo_alimen"/>
-                                <field name="pasatiempo1"/>
-                    
+                                <field name="pasatiempo1" string="Pasa tiempo"/>
                             </group>
                             <group string="Estado civil">
                                 <field name="marital"/>
@@ -145,7 +144,7 @@
                                 <field name="name_f_1" attrs="{'invisible': [('otro_fami_dep','=', False)]}"/>
                                 <field name="doctype1_1" string="Tipo de documento" attrs="{'invisible': [('otro_fami_dep','=', False)]}"/>
                                 <field name="sex1_1" string="Sexo" attrs="{'invisible': [('otro_fami_dep','=', False)]}"/>
-                                <field name="eps_1" attrs="{'invisible': [('otro_fami_dep','=', False)]}"/>
+                                <field name="eps_1" string="EPS" attrs="{'invisible': [('otro_fami_dep','=', False)]}"/>
                                 <field name="ocu_1" attrs="{'invisible': [('otro_fami_dep','=', False)]}"/>
                                 <field name="dep_eco_1" string="Depende económicamente del colaborador" attrs="{'invisible': [('otro_fami_dep','=', False)]}"/>
                             </group>
@@ -165,7 +164,7 @@
                                 <field name="name_f_2" attrs="{'invisible': [('otro_fami_dep_1','=', False)]}"/>
                                 <field name="doctype1_2" string="Tipo de documento" attrs="{'invisible': [('otro_fami_dep_1','=', False)]}"/>
                                 <field name="sex1_2" string="Sexo" attrs="{'invisible': [('otro_fami_dep_1','=', False)]}"/>
-                                <field name="eps_2" attrs="{'invisible': [('otro_fami_dep_1','=', False)]}"/>
+                                <field name="eps_2" string="EPS" attrs="{'invisible': [('otro_fami_dep_1','=', False)]}"/>
                                 <field name="ocu_2" attrs="{'invisible': [('otro_fami_dep_1','=', False)]}"/>
                                 <field name="dep_eco_2" string="Depende económicamente del colaborador" attrs="{'invisible': [('otro_fami_dep_1','=', False)]}"/>
                             </group>
@@ -183,110 +182,6 @@
                     <field name="marital1"/>
                 </xpath>
                 
-                <!--xpath expr="//page[@name='inf_fa']" position="after">
-                    <page name="exp" string="informacion academica"> 
-                        <group string="Education">
-                            <group>
-                                <field name="nivel_forma"/>
-                                <field name="insti_educ"/>
-                                <field name="estate_study" string="Estado del estudio"/>
-                            </group>
-                            <group>
-                                <field name="nombre_forma"/>
-                                <field name="date_grade"/>
-                                <field name="num_horas"/>
-                            </group>
-                        </group>
-                        <group>
-                            <field name="otro_estudio"/>
-                        </group>
-                        <group>
-                            <group>
-                                <field name="nivel_forma_1" attrs="{'invisible': [('otro_estudio','=', False)]}"/>
-                                <field name="insti_educ_1" attrs="{'invisible': [('otro_estudio','=', False)]}"/>
-                                <field name="estate_study_1" attrs="{'invisible': [('otro_estudio','=', False)]}"/>
-                            </group>
-                            <group>
-                                <field name="nombre_forma_1" attrs="{'invisible': [('otro_estudio','=', False)]}"/>
-                                <field name="date_grade_1" attrs="{'invisible': [('otro_estudio','=', False)]}"/>
-                                <field name="num_horas_1" attrs="{'invisible': [('otro_estudio','=', False)]}"/>
-                            </group>
-                        </group>
-                        <group>
-                            <field name="otro_estudio_1" attrs="{'invisible': [('otro_estudio','=', False)]}"/>
-                        </group>
-                        <group>
-                            <group>
-                                <field name="nivel_forma_2" attrs="{'invisible': [('otro_estudio_1','=', False)]}"/>
-                                <field name="insti_educ_2" attrs="{'invisible': [('otro_estudio_1','=', False)]}"/>
-                                <field name="estate_study_2" attrs="{'invisible': [('otro_estudio_1','=', False)]}"/>
-                            </group>
-                            <group>
-                                <field name="nombre_forma_2" attrs="{'invisible': [('otro_estudio_1','=', False)]}"/>
-                                <field name="date_grade_2" attrs="{'invisible': [('otro_estudio_1','=', False)]}"/>
-                                <field name="num_horas_2" attrs="{'invisible': [('otro_estudio_1','=', False)]}"/>
-                            </group>
-                        </group>
-                    </page>
-                </xpath-->
-                <!--xpath expr="//page[@name='inf_fa']" position="before">
-                    <page name="exp" string="Experiencia laboral"> 
-                        <group string="Experiencia laboral">
-                            <group>
-                                <field name="cargo_exp"/>
-                                <field name="date_in"/>
-                                <field name="tipo_contrato"/>
-                                <field name="retiro"/>
-                                <field name="fun"/>
-                            </group>
-                            <group>
-                                <field name="empresa"/>
-                                <field name="date_out"/>
-                                <field name="state_ex_id" string="Departamento de expedicion"/>
-                                <field name="country_ex_id"/>
-                                <field name="city_ex_id"/>
-                            </group>
-                        </group>
-                        <group>
-                            <field name="otro_cargo"/>
-                        </group>
-                        <group>
-                            <group>
-                                <field name="cargo_exp_1" attrs="{'invisible': [('otro_cargo','=', False)]}"/>
-                                <field name="date_in_1" attrs="{'invisible': [('otro_cargo','=', False)]}"/>
-                                <field name="tipo_contrato_1" attrs="{'invisible': [('otro_cargo','=', False)]}"/>
-                                <field name="retiro_1" attrs="{'invisible': [('otro_cargo','=', False)]}"/>
-                                <field name="fun_1" attrs="{'invisible': [('otro_cargo','=', False)]}"/>
-                            </group>
-                            <group>
-                                <field name="empresa_1" attrs="{'invisible': [('otro_cargo','=', False)]}"/>
-                                <field name="date_out_1" attrs="{'invisible': [('otro_cargo','=', False)]}"/>
-                                <field name="state_ex_id_1" string="Departamento de expedicion" attrs="{'invisible': [('otro_cargo','=', False)]}"/>
-                                <field name="country_ex_id_1" attrs="{'invisible': [('otro_cargo','=', False)]}"/>
-                                <field name="city_ex_id_1" attrs="{'invisible': [('otro_cargo','=', False)]}"/>
-                            </group>
-                        </group>
-                        <group>
-                            <field name="otro_cargo_1" attrs="{'invisible': [('otro_cargo','=', False)]}"/>
-                        </group>
-                        <group>
-                            <group>
-                                <field name="cargo_exp_2" attrs="{'invisible': [('otro_cargo_1','=', False)]}"/>
-                                <field name="date_in_2" attrs="{'invisible': [('otro_cargo_1','=', False)]}"/>
-                                <field name="tipo_contrato_2" attrs="{'invisible': [('otro_cargo_1','=', False)]}"/>
-                                <field name="retiro_2" attrs="{'invisible': [('otro_cargo_1','=', False)]}"/>
-                                <field name="fun_2" attrs="{'invisible': [('otro_cargo_1','=', False)]}"/>
-                            </group>
-                            <group>
-                                <field name="empresa_2" attrs="{'invisible': [('otro_cargo_1','=', False)]}"/>
-                                <field name="date_out_2" attrs="{'invisible': [('otro_cargo_1','=', False)]}"/>
-                                <field name="state_ex_id_2" string="Departamento de expedicion" attrs="{'invisible': [('otro_cargo_1','=', False)]}"/>
-                                <field name="country_ex_id_2" attrs="{'invisible': [('otro_cargo_1','=', False)]}"/>
-                                <field name="city_ex_id_2" attrs="{'invisible': [('otro_cargo_1','=', False)]}"/>
-                            </group>
-                        </group>
-                    </page>
-                </xpath-->
             </field>
         </record>
     </data>
