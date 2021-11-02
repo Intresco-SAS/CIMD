@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_crm_lead_form_inherit" model="ir.ui.view">
+            <field name="name">crm.lead.form.inherit</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='internal_notes']" name="formulario" position="after">
+                    <page string="Formulario">
+                        <group style = "line-height: 25px;" string="FORMULARIO DEL CLIENTE CIMD">                 
+                        </group>
+                        <group string = "Titulo1">
+                            <field name="solo_empresarios" style="width:100%%"/><br/>
+                            <field name="ingresos_generando" style="width:100%%"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="facturacion_mensual" style="width:100%%"/><br/>
+                            </group>
+                            <group>
+                                <field name="tiempo_mercado" style="width:100%%"/><br/>
+                            </group>
+                        </group> 
+                        <group string = "Titulo2">
+                            <group>
+                                <field name="pais_id"/>
+                                <field name="localidad"/>
+                                <field name="telefone"/>
+                                <field name="sector_industrial" style="width:100%%"/>
+                                <field name="nombre_contacto" />
+                                <field name="telefono_contacto"/>
+                                <field name="mail_contacto"/>
+                                <field name="direccion_sociales"/>
+                                <field name="tamaño_empresa"/>
+                            </group>
+                            <group>
+                                <field name="city_id" />
+                                <field name="direccion"/>
+                                <field name="celular"/>
+                                <field name="sector_industrial" style="width:100%%"/>
+                                <field name="celular_contacto" />
+                                <field name="cargo_contacto"/>
+                                <field name="website_empresa"/>
+                                <field name="Tipo_empresa_id" widget="many2many_tags"/>
+                            </group>
+                        </group>
+                        <group string="Titulo">
+                            <field name="necesidad" style="width:100%%"/>
+                            <field name="dispo_invertir" />
+                            <field name="obser"/>
+                        </group> 
+                        <group>
+                            <group>
+                                <field name="nombre_cargo"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//page[@name='formulario']" position="after">
+                    <page string="ENCUESTA DE SATISFACCIÓN DE CONSULTORÍA- MICRONEGOCIOS E INVESTIGACIÓN">
+                        <group style = "line-height: 25px;" string="FORMULARIO DEL CLIENTE CIMD">                 
+                        </group>
+                        <group string = "Titulo1">
+                            <field name="solo_empresarios" style="width:100%%"/><br/>
+                            <field name="ingresos_generando" style="width:100%%"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
