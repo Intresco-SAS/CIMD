@@ -105,11 +105,11 @@ class EmployeeFullName(models.Model):
     ###########################################################################
     name_f = fields.Char(string='Nombre completo', copy=True)
     r_paren = fields.Selection([('1', 'Hij@'),('2', 'Padre'),
-                                ('3','Herman@'),
-                                ('4','4'),
-                                ('5','5'),
-                                ('6','6')]
-                               )
+                                ('3','Herman@')#,
+                                #('4','4'),
+                                #('5','5'),
+                                #('6','6')
+                                ])
     doctype1 = fields.Selection([('12', 'Identity Card'),
                                  ('13', 'Citizenship Card'),
                                  ('21','Alien Registration Card'),
@@ -284,7 +284,8 @@ class EmployeeFullName(models.Model):
     #################################################################
     otro_fami_dep = fields.Boolean('Agregar otro familiar dependiente')
     name_f_1 = fields.Char(string='Nombre completo', copy=True)
-    r_paren_1 = fields.Selection([('1', 'Hij@'),('2', 'Padre'),('3','Herman@'),('4','4'),('5','5'),('6','6')])
+    r_paren_1 = fields.Selection([('1', 'Hij@'),('2', 'Padre'),('3','Herman@')#,('4','4'),('5','5'),('6','6')
+    ])
     doctype1_1 = fields.Selection([('12', 'Identity Card'),('13', 'Citizenship Card'),('21','Alien Registration Card'),('41','PEP')])
     num_iden_1 = fields.Char(string='Numero de identificacion', copy=True)
     sex1_1 = fields.Selection([('hombre', 'Hombre'),('mujer', 'Mujer'),('otro','Otro')])
@@ -340,7 +341,8 @@ class EmployeeFullName(models.Model):
     ################################################################
     otro_fami_dep_1 = fields.Boolean('Agregar otro familiar dependiente')
     name_f_2 = fields.Char(string='Nombre completo', copy=True)
-    r_paren_2 = fields.Selection([('1', 'Hij@'),('2', 'Padre'),('3','Herman@'),('4','4'),('5','5'),('6','6')])
+    r_paren_2 = fields.Selection([('1', 'Hij@'),('2', 'Padre'),('3','Herman@')#,('4','4'),('5','5'),('6','6')
+    ])
     doctype1_2 = fields.Selection([('12', 'Identity Card'),('13', 'Citizenship Card'),('21','Alien Registration Card'),('41','PEP')])
     num_iden_2 = fields.Char(string='Numero de identificacion', copy=True)
     sex1_2 = fields.Selection([('hombre', 'Hombre'),('mujer', 'Mujer'),('otro','Otro')])
