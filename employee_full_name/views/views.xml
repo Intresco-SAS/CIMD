@@ -181,6 +181,9 @@
                 <xpath expr="//field[@name='marital']" position="after">
                     <field name="marital1"/>
                 </xpath>
+                <xpath expr="//field[@name='marital']" position="attributes">
+                    <attribute name="attrs">{'invisible': 1}</attribute>
+                </xpath>
                 
             </field>
         </record>
