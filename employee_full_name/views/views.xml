@@ -178,7 +178,7 @@
                         </group>
                     </page>
                 </xpath>
-                <xpath expr="//field[@name='marital']" position="after">
+                <xpath expr="//field[@name='marital']" position="replace">
                     <field name="marital1"/>
                 </xpath>
                 
