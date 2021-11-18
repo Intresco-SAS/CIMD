@@ -19,8 +19,13 @@
                     <field name="contract_type_id"/>
                 </group>  
             </xpath>
+            <xpath expr="//group[@name='compensacion']" position="before">
+                <group string="Compensación">
+                    <field name="wage">
+                </group>
+            </xpath>
             <xpath expr="//group[@name='yearly_advantages']" position="replace">
-                <group name="compensacion" string="Compensación">
+                <group name="compensacion">
                     <label for="honorarios"/>
                         <div class="o_row" name="wage">
                             <field name="honorarios" widget='monetary'/>
@@ -28,6 +33,7 @@
                         </div>
                     <field name="grado_salarial" />
                 </group >
+               
                 <group name="terminos" string="Términos del Contrato">
                     <field name="date_start"/>
                     <field name="first_contract_date" attrs="{'invisible': ['|', ('first_contract_date', '=', False), ('first_contract_date', '=', 'date_start')]}"/>
