@@ -21,7 +21,7 @@
             </xpath>
             <xpath expr="//group[@name='compensacion']" position="before">
                 <group string="Compensación">
-                    <field name="wage">
+                    <field name="wage"/>
                 </group>
             </xpath>
             <xpath expr="//group[@name='yearly_advantages']" position="replace">
