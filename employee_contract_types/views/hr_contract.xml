@@ -19,7 +19,7 @@
                     <field name="contract_type_id"/>
                 </group>  
             </xpath>
-            <xpath expr="//group[@name='yearly_advantages']" position="before">
+            <xpath expr="//group[@name='salary_and_advantages']" position="replace">
                 <group name="comp" string="Compensación">
                     <field name="wage"/>
                 </group>
