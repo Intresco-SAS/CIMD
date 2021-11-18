@@ -16,7 +16,11 @@ class HrContract(models.Model):
                                    ('4', 'Gasto ventas')
                                    ])
     fin_periodo_prueba = fields.Date(string="Fin del periodo de prueba")
-    perfil_cargo = fields.Char(string="Perfil del cargo")
+    
+    #Perfil_cargo no se usa, se cambia por perfil_cargo1
+    perfil_cargo = fields.Char(string="Perfil del cargo") 
+    perfil_cargo1 = fields.Binary(string="Perfil del cargo")
+
     antiguedad = fields.Integer(string="Antigüedad")
     bank_id = fields.Integer(string="Número de cuenta")
     metodo_pago = fields.Selection([('a', 'Transferencia bancaria (predterminado)')])

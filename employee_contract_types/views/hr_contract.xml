@@ -41,7 +41,7 @@
                     <field name="fin_periodo_prueba" />
                 </group>  
                 <group string="Perfil del cargo y antigüedad">
-                    <field name="perfil_cargo" widget ="url"/>
+                    <field name="perfil_cargo1" widget ="url"/>
                     <label for="antiguedad"/>
                         <div class="o_row">
                             <field name="antiguedad"/>
