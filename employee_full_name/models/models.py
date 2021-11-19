@@ -569,7 +569,7 @@ class EmployeeFullName(models.Model):
         ('widower', 'Widower'),
         ('divorced', 'Divorced'),
         ('union_libre', 'Union Libre'),
-    ], string='Marital Status', default='Single', tracking=True)
+    ], string='Estado civil')
 
     '''def _colombia1(self):
         return self.env['res.country'].search([('code', '=', 'CO')]).id'''
