@@ -72,7 +72,7 @@
                             <field name="afc" />
                         </group>
                         <group>
-                            <field name="eps"/>
+                            <field name="eps1"/>
                             <field name="afp"/>
                             <field name="cs" />
                         </group>
