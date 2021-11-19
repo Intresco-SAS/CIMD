@@ -1,5 +1,5 @@
 <odoo>
-	<text position="justify">...</text>
+	
 	<template id="report_hr_employee_contract">
 		<t t-call="web.html_container">
 			<t t-foreach="docs" t-as="o">
@@ -7,6 +7,7 @@
 					<t t-set="o" t-value="o.with_context(lang=lang)" />
 					<div class="page">
 						<div class="text-center">
+							<text position="justify">...</text>
 		                	<strong>CORPORACION INDUSTRIAL MINUTO DE DIOS <br/>830000440-9</strong>
 							<!--p>Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro</p-->
 		                </div>
