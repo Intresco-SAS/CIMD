@@ -123,6 +123,8 @@ class EmployeeFullName(models.Model):
                              ]
                             )
     birthday1 = fields.Date(string='Fecha de nacimiento')
+
+    #EPS is changed to EPS1
     eps = fields.Selection([('Ambuq', 'Ambuq'),
                         ('Asmet_Salud', 'Asmet Salud'),
                         ('Cafesalud', 'Cafesalud'),
@@ -157,6 +159,53 @@ class EmployeeFullName(models.Model):
                         ('MutualSer', 'Mutual Ser'),
                         ('Nuevaeps', 'Nueva eps'),
                         ])
+
+    eps1 = fields.Selection(string='EPS',
+                        selection=[('Ambuq', 'Ambuq'),
+                        ('Asmet_Salud', 'Asmet Salud'),
+                        ('Cafesalud', 'Cafesalud'),
+                        ('CajacopiAtlantico', 'Cajacopi Atlántico'),
+                        ('CapitalSalud', 'Capital Salud'),
+                        ('Capresoca', 'Capresoca'),
+                        ('Colmedica', 'Colmedica'),
+                        ('Colpatria', 'Colpatria'),
+                        ('Comfachoc', 'Comfachocó'),
+                        ('Comfacor', 'Comfacor'),
+                        ('Comfacundi', 'Comfacundi'),
+                        ('Comfamiliar', 'Comfamiliar'),
+                        ('ComfamiliarNariño', 'Comfamiliar Nariño'),
+                        ('ComfenalcoAntioquia', 'Comfenalco Antioquia'),
+                        ('ComfenalcoValle', 'Comfenalco Valle'),
+                        ('Comparta', 'Comparta'),
+                        ('Compensar', 'Compensar'),
+                        ('Convidia', 'Convidia'),
+                        ('Coomeva', 'Coomeva'),
+                        ('Coosalud', 'Coosalud'),
+                        ('CruzBlanca', 'Cruz Blanca'),
+                        ('Ecoopsops', 'Ecoopsops'),
+                        ('Empresamutual', 'Empresa mutual'),
+                        ('Empresamutual', 'Empresa mutual'),
+                        ('EmssanarESS', 'Emssanar ESS'),
+                        ('EpsasociacinIND', 'Eps asociación IND'),
+                        ('Famisanar', 'Famisanar'),
+                        ('Fosyga', 'Fosyga'),
+                        ('GoldenGroup', 'GoldenGroup'),
+                        ('HumanaVivir', 'Comfenalco Antioquia'),
+                        ('Medimas', 'Medimas'),
+                        ('MutualSer', 'Mutual Ser'),
+                        ('Nuevaeps', 'Nueva eps'),
+                        ('redsalud','Red Salud'),
+                        ('serviciooccidentaldesalud','S.O.S. - Servicio occidental de salud'),
+                        ('saludmia','Salud Mía'),
+                        ('saludtotal','Salud Total'),
+                        ('saludvida','Saldu Vida'),
+                        ('sanitas','Sanitas'),
+                        ('saviasalud','Savia Salud'),
+                        ('solsalud','Solsalud'),
+                        ('sura','Sura')
+                        ]
+    )
+
     n_edu = fields.Selection([('1', 'Básica primaria'),
                               ('2', 'Básica secundaria'),
                               ('3', 'Bachiller'),
@@ -290,6 +339,8 @@ class EmployeeFullName(models.Model):
     num_iden_1 = fields.Char(string='Numero de identificacion', copy=True)
     sex1_1 = fields.Selection([('hombre', 'Hombre'),('mujer', 'Mujer'),('otro','Otro')])
     birthday1_1 = fields.Date(string='Fecha de nacimiento')
+    
+    #ESP_1 is changed to ESP1_1
     eps_1 = fields.Selection([('Ambuq', 'Ambuq'),
                         ('Asmet_Salud', 'Asmet Salud'),
                         ('Cafesalud', 'Cafesalud'),
@@ -324,6 +375,54 @@ class EmployeeFullName(models.Model):
                         ('MutualSer', 'Mutual Ser'),
                         ('Nuevaeps', 'Nueva eps'),
                         ])
+
+
+    eps1_1 = fields.Selection(string='EPS',
+                        selection=[('Ambuq', 'Ambuq'),
+                        ('Asmet_Salud', 'Asmet Salud'),
+                        ('Cafesalud', 'Cafesalud'),
+                        ('CajacopiAtlantico', 'Cajacopi Atlántico'),
+                        ('CapitalSalud', 'Capital Salud'),
+                        ('Capresoca', 'Capresoca'),
+                        ('Colmedica', 'Colmedica'),
+                        ('Colpatria', 'Colpatria'),
+                        ('Comfachoc', 'Comfachocó'),
+                        ('Comfacor', 'Comfacor'),
+                        ('Comfacundi', 'Comfacundi'),
+                        ('Comfamiliar', 'Comfamiliar'),
+                        ('ComfamiliarNariño', 'Comfamiliar Nariño'),
+                        ('ComfenalcoAntioquia', 'Comfenalco Antioquia'),
+                        ('ComfenalcoValle', 'Comfenalco Valle'),
+                        ('Comparta', 'Comparta'),
+                        ('Compensar', 'Compensar'),
+                        ('Convidia', 'Convidia'),
+                        ('Coomeva', 'Coomeva'),
+                        ('Coosalud', 'Coosalud'),
+                        ('CruzBlanca', 'Cruz Blanca'),
+                        ('Ecoopsops', 'Ecoopsops'),
+                        ('Empresamutual', 'Empresa mutual'),
+                        ('Empresamutual', 'Empresa mutual'),
+                        ('EmssanarESS', 'Emssanar ESS'),
+                        ('EpsasociacinIND', 'Eps asociación IND'),
+                        ('Famisanar', 'Famisanar'),
+                        ('Fosyga', 'Fosyga'),
+                        ('GoldenGroup', 'GoldenGroup'),
+                        ('HumanaVivir', 'Comfenalco Antioquia'),
+                        ('Medimas', 'Medimas'),
+                        ('MutualSer', 'Mutual Ser'),
+                        ('Nuevaeps', 'Nueva eps'),
+                        ('redsalud','Red Salud'),
+                        ('serviciooccidentaldesalud','S.O.S. - Servicio occidental de salud'),
+                        ('saludmia','Salud Mía'),
+                        ('saludtotal','Salud Total'),
+                        ('saludvida','Saldu Vida'),
+                        ('sanitas','Sanitas'),
+                        ('saviasalud','Savia Salud'),
+                        ('solsalud','Solsalud'),
+                        ('sura','Sura')
+                        ]
+    )
+
     n_edu_1 = fields.Selection([('1', 'Básica primaria'),
                               ('2', 'Básica secundaria'),
                               ('3', 'Bachiller'),
@@ -347,6 +446,8 @@ class EmployeeFullName(models.Model):
     num_iden_2 = fields.Char(string='Numero de identificacion', copy=True)
     sex1_2 = fields.Selection([('hombre', 'Hombre'),('mujer', 'Mujer'),('otro','Otro')])
     birthday1_2 = fields.Date(string='Fecha de nacimiento')
+    
+    #EPS_2 is changed to ESP1_2
     eps_2 = fields.Selection([('Ambuq', 'Ambuq'),
                         ('Asmet_Salud', 'Asmet Salud'),
                         ('Cafesalud', 'Cafesalud'),
@@ -381,6 +482,53 @@ class EmployeeFullName(models.Model):
                         ('MutualSer', 'Mutual Ser'),
                         ('Nuevaeps', 'Nueva eps'),
                         ])
+
+    eps1_2 = fields.Selection(string='EPS',
+                        selection=[('Ambuq', 'Ambuq'),
+                        ('Asmet_Salud', 'Asmet Salud'),
+                        ('Cafesalud', 'Cafesalud'),
+                        ('CajacopiAtlantico', 'Cajacopi Atlántico'),
+                        ('CapitalSalud', 'Capital Salud'),
+                        ('Capresoca', 'Capresoca'),
+                        ('Colmedica', 'Colmedica'),
+                        ('Colpatria', 'Colpatria'),
+                        ('Comfachoc', 'Comfachocó'),
+                        ('Comfacor', 'Comfacor'),
+                        ('Comfacundi', 'Comfacundi'),
+                        ('Comfamiliar', 'Comfamiliar'),
+                        ('ComfamiliarNariño', 'Comfamiliar Nariño'),
+                        ('ComfenalcoAntioquia', 'Comfenalco Antioquia'),
+                        ('ComfenalcoValle', 'Comfenalco Valle'),
+                        ('Comparta', 'Comparta'),
+                        ('Compensar', 'Compensar'),
+                        ('Convidia', 'Convidia'),
+                        ('Coomeva', 'Coomeva'),
+                        ('Coosalud', 'Coosalud'),
+                        ('CruzBlanca', 'Cruz Blanca'),
+                        ('Ecoopsops', 'Ecoopsops'),
+                        ('Empresamutual', 'Empresa mutual'),
+                        ('Empresamutual', 'Empresa mutual'),
+                        ('EmssanarESS', 'Emssanar ESS'),
+                        ('EpsasociacinIND', 'Eps asociación IND'),
+                        ('Famisanar', 'Famisanar'),
+                        ('Fosyga', 'Fosyga'),
+                        ('GoldenGroup', 'GoldenGroup'),
+                        ('HumanaVivir', 'Comfenalco Antioquia'),
+                        ('Medimas', 'Medimas'),
+                        ('MutualSer', 'Mutual Ser'),
+                        ('Nuevaeps', 'Nueva eps'),
+                        ('redsalud','Red Salud'),
+                        ('serviciooccidentaldesalud','S.O.S. - Servicio occidental de salud'),
+                        ('saludmia','Salud Mía'),
+                        ('saludtotal','Salud Total'),
+                        ('saludvida','Saldu Vida'),
+                        ('sanitas','Sanitas'),
+                        ('saviasalud','Savia Salud'),
+                        ('solsalud','Solsalud'),
+                        ('sura','Sura')
+                        ]
+    )
+
     n_edu_2 = fields.Selection([('1', 'Básica primaria'),
                               ('2', 'Básica secundaria'),
                               ('3', 'Bachiller'),

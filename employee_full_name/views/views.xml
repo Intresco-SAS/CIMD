@@ -124,7 +124,7 @@
                                 <field name="name_f"/>
                                 <field name="doctype1" string="Tipo de documento" />
                                 <field name="sex1" string="Sexo" />
-                                <field name="eps"/>
+                                <field name="eps1"/>
                                 <field name="ocu"/>
                                 <field name="dep_eco" string="Depende económicamente del colaborador"/>
                             </group>
@@ -144,7 +144,7 @@
                                 <field name="name_f_1" attrs="{'invisible': [('otro_fami_dep','=', False)]}"/>
                                 <field name="doctype1_1" string="Tipo de documento" attrs="{'invisible': [('otro_fami_dep','=', False)]}"/>
                                 <field name="sex1_1" string="Sexo" attrs="{'invisible': [('otro_fami_dep','=', False)]}"/>
-                                <field name="eps_1" string="EPS" attrs="{'invisible': [('otro_fami_dep','=', False)]}"/>
+                                <field name="eps1_1" string="EPS" attrs="{'invisible': [('otro_fami_dep','=', False)]}"/>
                                 <field name="ocu_1" attrs="{'invisible': [('otro_fami_dep','=', False)]}"/>
                                 <field name="dep_eco_1" string="Depende económicamente del colaborador" attrs="{'invisible': [('otro_fami_dep','=', False)]}"/>
                             </group>
@@ -164,7 +164,7 @@
                                 <field name="name_f_2" attrs="{'invisible': [('otro_fami_dep_1','=', False)]}"/>
                                 <field name="doctype1_2" string="Tipo de documento" attrs="{'invisible': [('otro_fami_dep_1','=', False)]}"/>
                                 <field name="sex1_2" string="Sexo" attrs="{'invisible': [('otro_fami_dep_1','=', False)]}"/>
-                                <field name="eps_2" string="EPS" attrs="{'invisible': [('otro_fami_dep_1','=', False)]}"/>
+                                <field name="eps1_2" string="EPS" attrs="{'invisible': [('otro_fami_dep_1','=', False)]}"/>
                                 <field name="ocu_2" attrs="{'invisible': [('otro_fami_dep_1','=', False)]}"/>
                                 <field name="dep_eco_2" string="Depende económicamente del colaborador" attrs="{'invisible': [('otro_fami_dep_1','=', False)]}"/>
                             </group>
