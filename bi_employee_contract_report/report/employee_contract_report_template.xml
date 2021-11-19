@@ -38,39 +38,40 @@
 		                	</text>
 						</div>
 							<br/><br/>
-		                <div class="text-center">
-		                	<h5><strong>HACE CONSTAR</strong></h5>
-		                </div>
-		                	<p>
-								Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
-								número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
-                                INDUSTRIAL MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde
-                                <span t-field="o.date_start"/>.
-								<br/>
-								<br/>
-								Para confirmación de la información registrada en la presente certificación, favor
-								comunicarse al 3136304472.
-								<br/>
-								<br/>
-								Se expide en Bogotá D.C., a los 19 días del mes de Octubre de 2020.
-								Cordialmente,<br/>
-							</p>
-							<br/>
-							<br/>
-							<br/>
-							<p>Se expide en Bogotá D.C., a los <t t-esc="o.get_current_date()"/></p>
-							<br/>
-							<p>Cordialmente,</p>
-							<br/><br/><br/>
-							<p><strong>ROSALBA LOPEZ GOMEZ</strong><br/>VICERRECTOR REGIONAL</p>
-							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
-							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
-						</p>
-						<br/>
-						<br/>
-						<br/>
-					<br/>
-				</div>
+		                	<div class="text-center">
+		                		<h5><strong>HACE CONSTAR</strong></h5>
+							</div>
+									<p>
+											Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
+											número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
+											INDUSTRIAL MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde
+											<span t-field="o.date_start"/>.
+											<br/>
+											<br/>
+											Para confirmación de la información registrada en la presente certificación, favor
+											comunicarse al 3136304472.
+											<br/>
+											<br/>
+											Se expide en Bogotá D.C., a los 19 días del mes de Octubre de 2020.
+											Cordialmente,<br/>
+										</p>
+										<br/>
+										<br/>
+										<br/>
+										<p>Se expide en Bogotá D.C., a los <t t-esc="o.get_current_date()"/></p>
+										<br/>
+										<p>Cordialmente,</p>
+										<br/><br/><br/>
+										<p><strong>ROSALBA LOPEZ GOMEZ</strong><br/>VICERRECTOR REGIONAL</p>
+										<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
+										<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
+									</p>
+									<br/>
+									<br/>
+									<br/>
+									<br/>
+				 </div>
+							
 			</div>
 			<!--  Employee Contract Report Custom Footer -->
 			<div class="footer">
