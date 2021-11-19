@@ -4,7 +4,10 @@ from odoo import models, fields
 class HrContract(models.Model):
     _inherit = "hr.contract"
 
+    #contract_type_id no aplica, se cambia por contract_type_id1
     contract_type_id = fields.Many2one("hr.contract.type", string="Contract Type")
+    contract_type_id1 = fields.Many2one("hr.contract.type", string="Tipo de contrato")
+    
     nivel_del_cargo = fields.Selection([('a', 'A')])
     resource_calendar_id = fields.Many2one("resource.calendar", string="Jornada laboral")
     project = fields.Many2one("project.project", string="proyecto")
@@ -62,6 +65,8 @@ class HrContract(models.Model):
                         ('oaplica', 'No aplica'),
                         ]
     )
+
+    #EPS no aplica, se cambia por EPS1
     eps = fields.Selection(string='EPS',
                         selection=[('Ambuq', 'Ambuq'),
                         ('Asmet_Salud', 'Asmet Salud'),

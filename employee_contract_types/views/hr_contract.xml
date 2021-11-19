@@ -16,7 +16,7 @@
                     <field name="project" string="Proyecto" />
                     <field name="tipo_gasto" string="Tipo gasto" />
                     <field name="nivel_del_cargo"/>
-                    <field name="contract_type_id"/>
+                    <field name="contract_type_id1"/>
                 </group>  
             </xpath>
             <xpath expr="//group[@name='salary_and_advantages']" position="replace">
