@@ -27,7 +27,7 @@
 		name="bi_employee_contract_report.employee_contract_report_template"
 		file="bi_employee_contract_report.employee_contract_report_template"
 		menu="True"
-		/>
+		/>\u25CF
 
 	<report
 		id="employee_contract_report_action1"
@@ -38,6 +38,6 @@
 		name="bi_employee_contract_report.employee_contract_report_template1"
 		file="bi_employee_contract_report.employee_contract_report_document1"
 		menu="True"
-		/>
+		/>\u25CF
 
 </odoo>
