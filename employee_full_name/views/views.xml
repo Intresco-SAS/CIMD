@@ -122,7 +122,7 @@
                         <group string="Información familiar">
                             <group >
                                 <field name="name_f"/>
-                                <field name="doctype" string="Tipo de documento" />
+                                <field name="doctype1" string="Tipo de documento" />
                                 <field name="sex1" string="Sexo" />
                                 <field name="eps1"/>
                                 <field name="ocu"/>
