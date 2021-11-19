@@ -20,7 +20,7 @@
 		                <t t-set="active_contract" t-value="o.get_running_contract()"/>
 		                <p>
 							<div class="justify">
-								<h5>Que <strong><t t-esc="o.name.upper()"/></strong>, mayor de edad identificado(a) con cédula de ciudadanía número <t t-esc="o.identification_id or 'NIL' "/>, estuvo vinculado(a) a la <strong>CORPORACION INDUSTRIAL MINUTO DE DIOS</strong> mediante contrato laboral a <span t-field="active_contract.structure_type_id"/> desde el <span t-field="active_contract.date_start"/> hasta el <span t-field="active_contract.date_end"/>.</h5>
+								Que <strong><t t-esc="o.name.upper()"/></strong>, mayor de edad identificado(a) con cédula de ciudadanía número <t t-esc="o.identification_id or 'NIL' "/>, estuvo vinculado(a) a la <strong>CORPORACION INDUSTRIAL MINUTO DE DIOS</strong> mediante contrato laboral a <span t-field="active_contract.structure_type_id"/> desde el <span t-field="active_contract.date_start"/> hasta el <span t-field="active_contract.date_end"/>.
 							</div>
 						</p>
 		                <p>
