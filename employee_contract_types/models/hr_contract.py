@@ -95,16 +95,7 @@ class HrContract(models.Model):
                         ('HumanaVivir', 'Comfenalco Antioquia'),
                         ('Medimas', 'Medimas'),
                         ('MutualSer', 'Mutual Ser'),
-                        ('Nuevaeps', 'Nueva eps'),
-                        ('redsalud','Red Salud'),
-                        ('serviciooccidentaldesalud','S.O.S. - Servicio occidental de salud'),
-                        ('saludmia','Salud Mía'),
-                        ('saludtotal','Salud Total'),
-                        ('saludvida','Saldu Vida'),
-                        ('sanitas','Sanitas'),
-                        ('saviasalud','Savia Salud'),
-                        ('solsalud','Solsalud'),
-                        ('sura','Sura')
+                        ('Nuevaeps', 'Nueva eps')
                         ]
     )
 
