@@ -19,49 +19,32 @@
 		                <br/>
 		                <t t-set="active_contract" t-value="o.get_running_contract()"/>
 		                <p>
-							<text position="justify">Que <strong><t t-esc="o.name.upper()"/></strong>, mayor de edad identificado(a) con cédula de ciudadanía número <t t-esc="o.identification_id or 'NIL' "/>, estuvo vinculado(a) a la <strong>CORPORACION INDUSTRIAL MINUTO DE DIOS</strong> mediante contrato laboral a <span t-field="active_contract.structure_type_id"/> desde el <span t-field="active_contract.date_start"/> hasta el <span t-field="active_contract.date_end"/>.</text>
+							Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
+							número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
+                            INDUSTRIAL MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde
+                            <span t-field="o.date_start"/>.
+							<br/>
+							<br/>
+							Para confirmación de la información registrada en la presente certificación, favor
+							comunicarse al 3136304472.
+							<br/>
+							<br/>
+							Se expide en Bogotá D.C., a los 19 días del mes de Octubre de 2020.
+							Cordialmente,<br/>
 						</p>
-		                <p>
-							<text position="justify">
-		                	Se encontraba desempeñando el cargo de <strong><span t-field="active_contract.job_id"/></strong>, con una asignación salarial mensual de <strong><t t-esc="o.get_num_to_words(active_contract.wage)"/> (<span t-field="active_contract.wage" widget="monetary"/>).</strong>
-		                	</text>
-						</p>
-		                <p>
-							<text position="justify">
-		                	Igualmente, se relaciona la siguiente historia laboral:
-		                	</text>
-						</p>
-		                <t t-set="other_contracts" t-value="o.get_other_contract()"/>
-		                <table class="table table-striped table-bordered">
-		                	<tr style="background:#bdbdbd" class="text-center">
-								<td><strong>CARGO</strong></td>
-		                		<td><strong>DESDE</strong></td>
-		                		<td><strong>HASTA</strong></td>
-		                	</tr>
-		                	<tr t-foreach="other_contracts" t-as="o_contract" class="text-center">
-		                		<td><span t-field="o_contract.job_id"/></td>
-		                		<td><span t-field="o_contract.date_start"/></td>
-		                		<td><span t-field="o_contract.date_end"/></td>
-		                	</tr>
-		                </table>
-		                <br/>
-		                <p>Se expide en Bogotá D.C., a los <t t-esc="o.get_current_date()"/></p>
-		                <br/>
-		                <p>Cordialmente,</p>
-		                <br/><br/><br/>
-		                <p><strong>ROSALBA LOPEZ GOMEZ</strong><br/>VICERRECTOR REGIONAL</p>
+		            
+		           
 					</div>
 				</t>
 			</t>
 		</t>
 	</template>
-	<record id="hr_employee_contract" model="ir.actions.report">
-        <field name="name">Informe del historial de contratos</field>
-        <field name="model">hr.employee</field>
-        <field name="report_type">qweb-pdf</field>
-        <field name="report_name">employee_contract_history.report_hr_employee_contract</field>
-        <field name="report_file">employee_contract_history.report_hr_employee_contract</field>
-        <field name="binding_model_id" ref="hr.model_hr_employee"/>
-        <field name="binding_type">report</field>
-    </record>
+	<template id="employee_contract_report_template">
+	<t t-call="web.html_container">
+		<t t-foreach="docs" t-as="o">
+			<t t-call="bi_employee_contract_report.employee_contract_report_document" t-lang="o.employee_id.user_id.lang"/>
+			<field name="paperformat_id" ref="paperformat_export_payslip"/>
+		</t>
+	</t>
+	</template>
 </odoo>
