@@ -1,97 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-
-	<!--  Employee Contract Report Document -->
-	<template id="employee_contract_report_document">
+	
+	<template id="report_hr_employee_contract">
 		<t t-call="web.html_container">
-			<t t-set="o" t-value="o.with_context(lang=o.employee_id.user_id.lang)"/>
-		
-			<t t-if="not o and doc">
-				<t t-set="o" t-value="doc"/>
-			</t>
-			<t t-if="o and 'company_id' in o">
-				<t t-set="company" t-value="o.company_id"></t>
-			</t>
-			<t t-if="not o or not 'company_id' in o">
-				<t t-set="company" t-value="res_company"></t>
-			</t>
-
-			<!--  Employee Contract Report Custom Header -->
-			<div class="header">
-				<div>
-					<div>
-						<center>
-							<div>
-								<img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo"/>
-							</div>
-						</center>
-					</div>
-				</div>
-			</div>
-
-			<div class="article">
-				<div class="page">
-						<p class='text-center' style="font-size:28px;">
-							<center>
-								<h3>
-									CORPORACION INDUSTRIAL MINUTO DE DIOS<br/>
-									830000440-9<br/>
-								</h3>
-								<!--h5>
-									Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro<br/>
-								</h5-->
-						    </center>  
+			<t t-foreach="docs" t-as="o">
+				<t t-call="employee_contract_history.external_layout">
+					<t t-set="o" t-value="o.with_context(lang=lang)" />
+					<div class="page">
+						<div class="text-center">
+							<text position="justify">
+		                	<strong>CORPORACION INDUSTRIAL MINUTO DE DIOS <br/>830000440-9</strong>
+							<!--p>Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro</p-->
+		                	</text>
+						</div>
+		                <br/><br/>
+		                <div class="text-center">
+		                	<h5><strong>HACE CONSTAR</strong></h5>
+		                </div>
+		                <br/>
+		                <t t-set="active_contract" t-value="o.get_running_contract()"/>
+		                <p>
+							Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
+							número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
+                            INDUSTRIAL MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde
+                            <span t-field="o.date_start"/>.
 							<br/>
 							<br/>
-							<center>
-								<h3>
-									HACE CONSTAR<br/>
-								</h3>
-						    </center>
-							<h5>
-								Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
-								número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
-                                INDUSTRIAL MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde
-                                <span t-field="o.date_start"/>.
-								<br/>
-								<br/>
-								Para confirmación de la información registrada en la presente certificación, favor
-								comunicarse al 3136304472.
-								<br/>
-								<br/>
-								Se expide en Bogotá D.C., a los 19 días del mes de Octubre de 2020.
-								Cordialmente,<br/>
-							</h5>
+							Para confirmación de la información registrada en la presente certificación, favor
+							comunicarse al 3136304472.
 							<br/>
 							<br/>
-							<br/>
-							<h3 style="font-weight: bold;">
-								ROSALBA LOPEZ GOMEZ
-							</h3>
-							<h3>
-								VICERRECTOR REGIONAL
-							</h3>
-							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
-							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
+							Se expide en Bogotá D.C., a los 19 días del mes de Octubre de 2020.
+							Cordialmente,<br/>
 						</p>
-						<br/>
-						<br/>
-						<br/>
-					<br/>
-				</div>
-			</div>
-			<!--  Employee Contract Report Custom Footer -->
-			<div class="footer">
-				<div class="text-center" style="border-top: 1px solid black">
-					<center>
-						Carrera 73A N° 81B-70 Tel.: (57-1) 2916520 Atención al cliente: 5933004. Línea Nacional: 018000936670 Fax: 4308140
-						Bogotá D.C., Colombia www.uniminuto.edu
-					</center>
-				</div>
-			</div>
+		            
+		           
+					</div>
+				</t>
+			</t>
 		</t>
 	</template>
-
 	<template id="employee_contract_report_template">
 	<t t-call="web.html_container">
 		<t t-foreach="docs" t-as="o">
@@ -100,5 +48,4 @@
 		</t>
 	</t>
 	</template>
-
 </odoo>
