@@ -55,14 +55,22 @@
 									Se expide en Bogotá D.C., a los 19 días del mes de Octubre de 2020.
 									Cordialmente,<br/>
 								</p>
-									<br/>
-									<p>Se expide en Bogotá D.C., a los <t t-esc="o.get_current_date()"/></p>
-									<br/>
-									<p>Cordialmente,</p>
-									<br/><br/><br/>
-									<p><strong>ROSALBA LOPEZ GOMEZ</strong><br/>VICERRECTOR REGIONAL</p>
-									<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
-									<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
+								<br/>
+								<br/>
+								<br/>
+								<h3 style="font-weight: bold;">
+									ROSALBA LOPEZ GOMEZ
+								</h3>
+								<h3>
+									VICERRECTOR REGIONAL
+								</h3>
+								<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
+								<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
+							</p>
+							<br/>
+							<br/>
+							<br/>
+							<br/>
 					</div>							
 			</div>
 			<!--  Employee Contract Report Custom Footer -->
