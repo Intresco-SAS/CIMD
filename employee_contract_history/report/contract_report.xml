@@ -7,10 +7,11 @@
 					<t t-set="o" t-value="o.with_context(lang=lang)" />
 					<div class="page">
 						<div class="text-center">
-							<text position="justify">...</text>
+							<text position="justify">
 		                	<strong>CORPORACION INDUSTRIAL MINUTO DE DIOS <br/>830000440-9</strong>
 							<!--p>Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro</p-->
-		                </div>
+		                	</text>
+						</div>
 		                <br/><br/>
 		                <div class="text-center">
 		                	<h5><strong>HACE CONSTAR</strong></h5>
@@ -18,22 +19,24 @@
 		                <br/>
 		                <t t-set="active_contract" t-value="o.get_running_contract()"/>
 		                <p>
-							<text position="justify">...</text>
+							<text position="justify">
 		                	Que <strong><t t-esc="o.name.upper()"/></strong>, mayor de edad identificado(a) con cédula de ciudadanía número <t t-esc="o.identification_id or 'NIL' "/>, estuvo vinculado(a) a la <strong>CORPORACION INDUSTRIAL MINUTO DE DIOS</strong> mediante contrato laboral a <span t-field="active_contract.structure_type_id"/> desde el <span t-field="active_contract.date_start"/> hasta el <span t-field="active_contract.date_end"/>.
-		                </p>
+		                	</text>
+						</p>
 		                <p>
-							<text position="justify">...</text>
+							<text position="justify">
 		                	Se encontraba desempeñando el cargo de <strong><span t-field="active_contract.job_id"/></strong>, con una asignación salarial mensual de <strong><t t-esc="o.get_num_to_words(active_contract.wage)"/> (<span t-field="active_contract.wage" widget="monetary"/>).</strong>
-		                </p>
+		                	</text>
+						</p>
 		                <p>
-							<text position="justify">...</text>
+							<text position="justify">
 		                	Igualmente, se relaciona la siguiente historia laboral:
-		                </p>
+		                	</text>
+						</p>
 		                <t t-set="other_contracts" t-value="o.get_other_contract()"/>
 		                <table class="table table-striped table-bordered">
 		                	<tr style="background:#bdbdbd" class="text-center">
-								<text position="justify">...</text>
-		                		<td><strong>CARGO</strong></td>
+								<td><strong>CARGO</strong></td>
 		                		<td><strong>DESDE</strong></td>
 		                		<td><strong>HASTA</strong></td>
 		                	</tr>
