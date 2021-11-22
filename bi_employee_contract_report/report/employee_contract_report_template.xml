@@ -33,10 +33,10 @@
 				<div class="page">
 						<p class='text-center' style="font-size:28px;">
 							<center>
-								<h3>
+								<p>
 									CORPORACION INDUSTRIAL MINUTO DE DIOS<br/>
 									830000440-9<br/>
-								</h3>
+								</p>
 								<!--h5>
 									Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro<br/>
 								</h5-->
@@ -48,7 +48,7 @@
 									HACE CONSTAR<br/>
 								</h3>
 						    </center>
-							<h5>
+							<p>
 								Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
 								número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
                                 INDUSTRIAL MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde
@@ -61,13 +61,13 @@
 								<br/>
 								Se expide en Bogotá D.C., a los 19 días del mes de Octubre de 2020.
 								Cordialmente,<br/>
-							</h5>
+							</p>
 							<br/>
 							<br/>
 							<br/>
-							<h3 style="font-weight: bold;">
+							<p style="font-weight: bold;">
 								ROSALBA LOPEZ GOMEZ
-							</h3>
+							</p>
 							<h3>
 								VICERRECTOR REGIONAL
 							</h3>

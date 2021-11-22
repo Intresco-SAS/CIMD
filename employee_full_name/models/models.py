@@ -550,7 +550,7 @@ class EmployeeFullName(models.Model):
                                     ('4', 'Pollotariano'),
                                     ('5', 'Vegano')
                                     ]
-                                   )
+                                   )                               
     pasatiempo1 = fields.Selection([('1', 'Lectura'),
                                    ('2', 'Escritura'),
                                    ('3', 'Tiempo familiar'),
@@ -562,6 +562,8 @@ class EmployeeFullName(models.Model):
                                    ('9', 'Baile')
                                    ]
                                   )
+    pasatiempo1 = fields.Many2many
+
     marital1 = fields.Selection([
         ('single', 'Single'),
         ('married', 'Married'),
