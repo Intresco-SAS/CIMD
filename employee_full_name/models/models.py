@@ -562,8 +562,6 @@ class EmployeeFullName(models.Model):
                                    ('9', 'Baile')
                                    ]
                                   )
-    #pasatiempo1 = fields.Many2many
-
     marital1 = fields.Selection([
         ('single', 'Single'),
         ('married', 'Married'),

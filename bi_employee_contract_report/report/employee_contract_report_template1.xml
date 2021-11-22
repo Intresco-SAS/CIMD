@@ -35,10 +35,10 @@
 							<center>
 								<br/>
 								<br/>
-								<h3>
+								<p>
 									CORPORACION INDUSTRIAL MINUTO DE DIOS<br/>
 									830000440-9<br/>
-								</h3>
+								</p>
 								<!--h5>
 									Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro<br/>
 								</h5-->
@@ -50,6 +50,7 @@
 									HACE CONSTAR<br/>
 								</h5>
 						    </center>
+							<br/>
 							<p>
 								Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
 								número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
