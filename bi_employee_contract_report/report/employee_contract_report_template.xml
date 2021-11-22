@@ -34,8 +34,7 @@
 						<p class='text-center' style="font-size:28px;">
 							<center>
 								<p>
-									CORPORACION INDUSTRIAL MINUTO DE DIOS<br/>
-									830000440-9<br/>
+									<strong>CORPORACION INDUSTRIAL MINUTO DE DIOS <br/>830000440-9</strong>
 								</p>
 								<!--h5>
 									Entidad Privada de Educación Superior, de utilidad común, sin ánimo de lucro<br/>
@@ -43,11 +42,9 @@
 						    </center>  
 							<br/>
 							<br/>
-							<center>
-								<h5>
-									HACE CONSTAR<br/>
-								</h5>
-						    </center>
+							<div class="text-center">
+		                		<h5><strong>HACE CONSTAR</strong></h5>
+		                	</div>
 							<br/>
 							<p>
 								Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
