@@ -44,9 +44,9 @@
 							<br/>
 							<br/>
 							<center>
-								<h3>
+								<h5>
 									HACE CONSTAR<br/>
-								</h3>
+								</h5>
 						    </center>
 							<p>
 								Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
@@ -68,9 +68,9 @@
 							<p style="font-weight: bold;">
 								ROSALBA LOPEZ GOMEZ
 							</p>
-							<h3>
+							<p>
 								VICERRECTOR REGIONAL
-							</h3>
+							</p>
 							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
 							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
 						</p>
