@@ -611,7 +611,7 @@ class EmployeeFullName(models.Model):
             self.hide = True
     
 class pasatiempos(models.Model):
-    _description = 'Modelo para Manipular Many2many'
+    _description = 'Contiene campo pasatiempo'
     _name = 'model.pasatiempo'
 
     name = fields.Char('Pasatiempos')
