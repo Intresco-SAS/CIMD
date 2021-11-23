@@ -615,4 +615,4 @@ class pasatiempos(models.Model):
     _description = 'Contiene campo pasatiempo'
     _name = 'model.pasatiempo'
 
-    name = fields.Char('nombre')
+    name = fields.Char('Nombre')
