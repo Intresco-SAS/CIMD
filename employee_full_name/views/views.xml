@@ -93,7 +93,7 @@
                                 <field name="voluntariados_asociaciones"/>
                                 <field name="mascotas"/>
                                 <field name="tipo_alimen"/>
-                                <field name="pasatiempos_inf" string="Pasatiempo"/>
+                                <field name="pasatiempos_inf1" string="Pasatiempo"/>
                             </group>
                             <group string="Estado civil">
                                 <field name="marital"/>

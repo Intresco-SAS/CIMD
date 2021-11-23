@@ -266,7 +266,8 @@ class EmployeeFullName(models.Model):
     pasatiempos = fields.Char(string='Pasatiempos', copy=True)
 
     pasatiempos_inf = fields.Many2many('model.pasatiempo', string="Pasatiempos")
-    
+    pasatiempos_inf1 = fields.Many2one('model.pasatiempo', string="Pasatiempos")
+
     voluntariados_asociaciones = fields.Char(string='Voluntariados o asociaciones', copy=True)
     mascotas = fields.Selection([('1', 'Si'),('2', 'No')])
     job_id = fields.Many2one(help='Enter City')
@@ -614,4 +615,4 @@ class pasatiempos(models.Model):
     _description = 'Contiene campo pasatiempo'
     _name = 'model.pasatiempo'
 
-    name = fields.Char('Pasatiempos')
+    name = fields.Char('nombre')
