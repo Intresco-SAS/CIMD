@@ -49,7 +49,7 @@ class Employee(models.Model):
     def get_num_to_words(self, amount=0.0):
         """
         """
-        return num2words(decimal.Decimal(amount))
+        return num2words(decimal.Decimal(amount, lang='es'))
 
     def get_current_date(self):
         """
