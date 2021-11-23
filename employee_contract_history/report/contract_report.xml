@@ -18,15 +18,15 @@
 		                </div>
 		                <br/>
 		                <t t-set="active_contract" t-value="o.get_running_contract()"/>
-		                <p>
+		                <p align="justify">
 							<text position="justify">Que <strong><t t-esc="o.name.upper()"/></strong>, mayor de edad identificado(a) con cédula de ciudadanía número <t t-esc="o.identification_id or 'NIL' "/>, estuvo vinculado(a) a la <strong>CORPORACION INDUSTRIAL MINUTO DE DIOS</strong> mediante contrato laboral a <span t-field="active_contract.structure_type_id"/> desde el <span t-field="active_contract.date_start"/> hasta el <span t-field="active_contract.date_end"/>.</text>
 						</p>
-		                <p>
+		                <p align="justify">
 							<text position="justify">
 		                	Se encontraba desempeñando el cargo de <strong><span t-field="active_contract.job_id"/></strong>, con una asignación salarial mensual de <strong><t t-esc="o.get_num_to_words(active_contract.wage)"/> (<span t-field="active_contract.wage" widget="monetary"/>).</strong>
 		                	</text>
 						</p>
-		                <p>
+		                <p align="justify">
 							<text position="justify">
 		                	Igualmente, se relaciona la siguiente historia laboral:
 		                	</text>
@@ -45,7 +45,7 @@
 		                	</tr>
 		                </table>
 		                <br/>
-		                <p>Se expide en Bogotá D.C., a los <t t-esc="o.get_current_date()"/></p>
+		                <p align="justify">Se expide en Bogotá D.C., a los <t t-esc="o.get_current_date()"/></p>
 		                <br/>
 		                <p>Cordialmente,</p>
 		                <br/><br/><br/>
