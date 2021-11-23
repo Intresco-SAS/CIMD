@@ -46,10 +46,10 @@ class Employee(models.Model):
         contracts = self.contract_ids.filtered(lambda contract:contract.state != 'open')
         return contracts
 
-    def get_num_to_words(self, amount=0.0, language='es'):
+    def get_num_to_words(self, amount=0.0):
         """
         """
-        return num2words(decimal.Decimal(amount), language)
+        return num2words(decimal.Decimal(amount))
 
     def get_current_date(self):
         """
