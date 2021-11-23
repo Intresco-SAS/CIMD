@@ -37,6 +37,7 @@
     'data': [
         'views/views.xml',
         'data/l10n_cities_co_data.xml',
+        'data/pasatiempo_records.xml',
     ],
     # only loaded in demonstration mode
     'demo': [],
