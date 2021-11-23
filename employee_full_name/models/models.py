@@ -264,6 +264,9 @@ class EmployeeFullName(models.Model):
     fun = fields.Char(string='Funciones', copy=True)
     premios = fields.Char(string='Premios o distinciones', copy=True)
     pasatiempos = fields.Char(string='Pasatiempos', copy=True)
+
+    pasatiempos_inf = fields.Many2many('model.pasatiempo', string="Pasatiempos")
+    
     voluntariados_asociaciones = fields.Char(string='Voluntariados o asociaciones', copy=True)
     mascotas = fields.Selection([('1', 'Si'),('2', 'No')])
     job_id = fields.Many2one(help='Enter City')
@@ -607,3 +610,8 @@ class EmployeeFullName(models.Model):
         else:
             self.hide = True
     
+class pasatiempos(models.Model):
+    _description = 'Modelo para Manipular Many2many'
+    _name = 'model.pasatiempo'
+
+    name = fields.Char('Pasatiempos')
