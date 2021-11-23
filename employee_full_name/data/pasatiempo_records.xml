@@ -6,5 +6,53 @@
                 <field name="name">Lectura</field>
             </record>
 
+            <record id="pas_escritura" model="model.pasatiempo">
+                <field name="name">Escritura</field>
+            </record>
+
+            <record id="pas_tiempo_familiar" model="model.pasatiempo">
+                <field name="name">Tiempo Familiar</field>
+            </record>
+
+            <record id="pas_deporte" model="model.pasatiempo">
+                <field name="name">Deporte</field>
+            </record>
+
+            <record id="pas_musica" model="model.pasatiempo">
+                <field name="name">Música</field>
+            </record>
+
+            <record id="pas_viajes" model="model.pasatiempo">
+                <field name="name">Viajes</field>
+            </record>
+
+            <record id="pas_cocina" model="model.pasatiempo">
+                <field name="name">Cocina</field>
+            </record>
+
+            <record id="pas_teatro" model="model.pasatiempo">
+                <field name="name">Teatro</field>
+            </record>
+
+            <record id="pas_baile" model="model.pasatiempo">
+                <field name="name">Baile</field>
+            </record>
+
+            <record id="pas_meditacion_yoga_relajacion" model="model.pasatiempo">
+                <field name="name">Meditación, yoga y/o relajación</field>
+            </record>
+
+            <record id="pas_fotografia" model="model.pasatiempo">
+                <field name="name">Fotografía</field>
+            </record>
+
+            <record id="pas_artes_manualidades" model="model.pasatiempo">
+                <field name="name">Artes y/o manualidades</field>
+            </record>
+
+            <record id="pas_voluntariado" model="model.pasatiempo">
+                <field name="name">Voluntariado</field>
+            </record>
+
         </data>
     </odoo>
