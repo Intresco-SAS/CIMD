@@ -270,7 +270,7 @@ class EmployeeFullName(models.Model):
 
     voluntariados_asociaciones = fields.Char(string='Voluntariados o asociaciones', copy=True)
     mascotas = fields.Selection([('1', 'Si'),('2', 'No')])
-    job_id = fields.Many2one(help='Enter City')
+    job_id = fields.Many2one(placeholder="Puesto de trabajo")
     otro_cargo = fields.Boolean('Agregar otro cargo',)
     ######################################################
     cargo_exp_1 = fields.Char(string='Cargo', copy=True)
