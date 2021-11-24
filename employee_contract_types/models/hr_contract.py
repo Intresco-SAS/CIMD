@@ -18,6 +18,16 @@ class HrContract(models.Model):
                                    ('3', 'Gasto administrativo'),
                                    ('4', 'Gasto ventas')
                                    ])
+
+    nivel_del_cargo1 = fields.Selection([('gerente', 'Gerente'),
+                                   ('gerente_adm', 'Gerente administrativo'),
+                                   ('director', 'Director'),
+                                   ('coordin_consul_docen', 'Coordinador/Consultor/Docente'),
+                                   ('profesional', 'Profesional'),
+                                   ('analista', 'Analista'),
+                                   ('asistente', 'Asistente'),
+                                   ('tecnico', 'Técnico')
+                                   ])
     fin_periodo_prueba = fields.Date(string="Fin del periodo de prueba")
     
     #Perfil_cargo no se usa, se cambia por perfil_cargo1
