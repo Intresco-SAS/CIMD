@@ -15,7 +15,7 @@
                     <field name="resource_calendar_id" string="Jornada laboral"/>
                     <field name="project" string="Proyecto" />
                     <field name="tipo_gasto" string="Tipo gasto" />
-                    <field name="nivel_del_cargo1"/>
+                    <field name="nivel_del_cargo1" string="Nivel de cargo"/>
                     <field name="contract_type_id1"/>
                 </group>  
             </xpath>
