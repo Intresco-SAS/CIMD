@@ -13,7 +13,7 @@
                         </group>
                         <group>
                             <group>
-                                <field name="solo_empresarios" style="width:100%%"/><br/>
+                                <field name="solo_empresarios" style="width:200%%"/><br/>
                                 <field name="ingresos_generando" style="width:100%%"/><br/>
                                 <field name="facturacion_mensual" style="width:100%%"/><br/>
                                 <field name="tiempo_mercado" style="width:100%%"/><br/>
