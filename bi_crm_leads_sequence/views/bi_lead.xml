@@ -55,8 +55,6 @@
                             </group>
                         </group>
                     </page>
-                </xpath>
-                <xpath expr="//page[@name='formulario']" position="after">
                     <page string="ENCUESTA DE SATISFACCIÓN DE CONSULTORÍA- MICRONEGOCIOS E INVESTIGACIÓN">
                         <group style = "line-height: 25px;" string="FORMULARIO DEL CLIENTE CIMD">                 
                         </group>
@@ -66,6 +64,16 @@
                         </group>
                     </page>
                 </xpath>
+                <!--xpath expr="//page[@name='formulario']" position="after">
+                    <page string="ENCUESTA DE SATISFACCIÓN DE CONSULTORÍA- MICRONEGOCIOS E INVESTIGACIÓN">
+                        <group style = "line-height: 25px;" string="FORMULARIO DEL CLIENTE CIMD">                 
+                        </group>
+                        <group string = "Titulo1">
+                            <field name="solo_empresarios" style="width:100%%"/><br/>
+                            <field name="ingresos_generando" style="width:100%%"/>
+                        </group>
+                    </page>
+                </xpath-->
             </field>
         </record>
     </data>
