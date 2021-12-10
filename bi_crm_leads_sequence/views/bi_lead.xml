@@ -11,19 +11,17 @@
                     <page string="Formulario">
                         <group style = "line-height: 25px;" string="FORMULARIO DEL CLIENTE CIMD">                 
                         </group>
-                        <group string = "Titulo1">
-                            <field name="solo_empresarios" style="width:100%%"/><br/>
-                            <field name="ingresos_generando" style="width:100%%"/>
-                        </group>
                         <group>
                             <group>
+                                <field name="solo_empresarios" style="width:100%%"/><br/>
+                                <field name="ingresos_generando" style="width:100%%"/><br/>
                                 <field name="facturacion_mensual" style="width:100%%"/><br/>
-                            </group>
-                            <group>
                                 <field name="tiempo_mercado" style="width:100%%"/><br/>
                             </group>
+                            <group>
+                            </group>
                         </group> 
-                        <group string = "Titulo2">
+                        <group>
                             <group>
                                 <field name="pais_id"/>
                                 <field name="localidad"/>
@@ -46,7 +44,7 @@
                                 <field name="Tipo_empresa_id" widget="many2many_tags"/>
                             </group>
                         </group>
-                        <group string="Titulo">
+                        <group>
                             <field name="necesidad" style="width:100%%"/>
                             <field name="dispo_invertir" />
                             <field name="obser"/>
