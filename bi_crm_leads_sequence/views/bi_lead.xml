@@ -49,8 +49,8 @@
                         </group>
                         <group>
                             <field name="necesidad" style="width:100%%"/>
-                            <field name="dispo_invertir" />
-                            <field name="obser"/>
+                            <field name="dispo_invertir" string="Disponibilidad de inversión"/>
+                            <field name="obser" string="Observaciones"/>
                         </group> 
                         <group>
                             <group>
