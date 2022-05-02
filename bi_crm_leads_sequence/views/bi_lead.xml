@@ -10,6 +10,9 @@
                 <xpath expr="//page[@name='internal_notes']" name="formulario" position="replace">
                     <page string="internal_notes" invisible="1"/>
                 </xpath>
+                <xpath expr="//page[@name='lead']" name="formulario">
+                    <field name="description" placeholder="Add a description..."/>
+                </xpath>
                 <xpath expr="//page[@name='lead']" name="formulario" position="after">
                     <page string="Formulario">
                         <group style = "line-height: 25px;" string="FORMULARIO DEL CLIENTE CIMD">                 
