@@ -7,7 +7,10 @@
             <field name="model">crm.lead</field>
             <field name="inherit_id" ref="crm.crm_lead_view_form"/>
             <field name="arch" type="xml">
-                <xpath expr="//page[@name='internal_notes']" name="formulario" position="after">
+                <xpath expr="//page[@name='internal_notes']" name="formulario" position="replace">
+                    <page string="internal_notes" invisible="1"/>
+                </xpath>
+                <xpath expr="//page[@name='extra']" name="formulario" position="after">
                     <page string="Formulario">
                         <group style = "line-height: 25px;" string="FORMULARIO DEL CLIENTE CIMD">                 
                         </group>
