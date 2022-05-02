@@ -17,7 +17,7 @@ class HrEmployeePrivate(models.Model):
     state_id = fields.Many2one("res.country.state", help='Enter State', ondelete='restrict', string='Departamento de expedicion')
     country_id = fields.Many2one('res.country', string='Country', help='Select Country', ondelete='restrict')
     state_born_id = fields.Many2one("res.country.state",string='Departamento de nacimiento', help='Enter State', ondelete='restrict')
-    country_bornid = fields.Many2one('res.country', string='Pais de nacimeinto', help='Select Country', ondelete='restrict', default=lambda self: self.env['res.country'].browse([(49)]))
+    country_bornid = fields.Many2one('res.country', string='Pais de nacimiento', help='Select Country', ondelete='restrict', default=lambda self: self.env['res.country'].browse([(49)]))
     
 
     
@@ -67,7 +67,7 @@ class EmployeeFullName(models.Model):
     country_id = fields.Many2one('res.country', string='Country', help='Select Country', ondelete='restrict')    
     city_id = fields.Many2one('res.country.state.city', help='Enter City', string='Municipio de expedicion')
     state_born_id = fields.Many2one("res.country.state",string='Departamento de nacimiento', help='Enter State', ondelete='restrict')
-    country_bornid = fields.Many2one('res.country', string='Pais de nacimeinto', help='Select Country', ondelete='restrict', default=lambda self: self.env['res.country'].browse([(49)]))    
+    country_bornid = fields.Many2one('res.country', string='Pais de nacimiento', help='Select Country', ondelete='restrict', default=lambda self: self.env['res.country'].browse([(49)]))    
     city_born_id = fields.Many2one('res.country.state.city', string='Municipio de nacimiento', help='Enter City')
     city_re_id = fields.Many2one('res.country.state.city', string='Ciudad de residencia', help='Enter City')
     hide = fields.Boolean(string='Hide', compute="_compute_hide")
@@ -203,7 +203,7 @@ class EmployeeFullName(models.Model):
                    ('4', 'Aprendizaje'),
                    ('5', 'Temporal, ocasional o accidental'),])
     state_ex_id = fields.Many2one("res.country.state",string='Departamento de nacimiento', help='Enter State', ondelete='restrict')
-    country_ex_id = fields.Many2one('res.country', string='Pais de nacimeinto', help='Select Country', ondelete='restrict')    
+    country_ex_id = fields.Many2one('res.country', string='Pais de nacimiento', help='Select Country', ondelete='restrict')    
     city_ex_id = fields.Many2one('res.country.state.city', string='Municipio de nacimiento', help='Enter City')
     retiro = fields.Selection(
         string='Motivo de retiro',
@@ -240,7 +240,7 @@ class EmployeeFullName(models.Model):
     fun_1 = fields.Char(string='Funciones', copy=True)
     empresa_1 = fields.Char(string='Empresa', copy=True)
     state_ex_id_1 = fields.Many2one("res.country.state",string='Departamento de nacimiento', help='Enter State', ondelete='restrict')
-    country_ex_id_1 = fields.Many2one('res.country', string='Pais de nacimeinto', help='Select Country', ondelete='restrict')    
+    country_ex_id_1 = fields.Many2one('res.country', string='Pais de nacimiento', help='Select Country', ondelete='restrict')    
     city_ex_id_1 = fields.Many2one('res.country.state.city', string='Municipio de nacimiento', help='Enter City')
     otro_cargo_1 = fields.Boolean('Agregar otro cargo',)
     ######################################################
@@ -264,7 +264,7 @@ class EmployeeFullName(models.Model):
     fun_2 = fields.Char(string='Funciones', copy=True)
     empresa_2 = fields.Char(string='Empresa', copy=True)
     state_ex_id_2 = fields.Many2one("res.country.state",string='Departamento de nacimiento', help='Enter State', ondelete='restrict')
-    country_ex_id_2 = fields.Many2one('res.country', string='Pais de nacimeinto', help='Select Country', ondelete='restrict')    
+    country_ex_id_2 = fields.Many2one('res.country', string='Pais de nacimiento', help='Select Country', ondelete='restrict')    
     city_ex_id_2 = fields.Many2one('res.country.state.city', string='Municipio de nacimiento', help='Enter City')
     #############################################################
     otro_estudio = fields.Boolean('Agregar otro titulo',)
