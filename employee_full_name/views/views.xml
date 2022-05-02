@@ -63,7 +63,7 @@
                                 <field name="state_id" options="{'no_quick_create': True, 'no_create_edit' : True}" attrs="{'invisible':[('hide', '=', True)]}"/>
                                 <field name="city_id" attrs="{'invisible':[('hide', '=', True)]}"/>
                             </group>
-                            <group string="Lugar y fecha de Nacimeinto">
+                            <group string="Lugar y fecha de Nacimiento">
                                 <field name="birthday" />
                                 
                                 <field name="country_bornid"/>
