@@ -48,7 +48,7 @@
 									HACE CONSTAR<br/>
 								</h3>
 						    </center>
-							<h3>
+							<h3 style="font-weight: bold;">
 								Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
 								número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
                                 INDUSTRIAL MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde 
@@ -66,9 +66,7 @@
 							<br/>
 							<br/>
 							<h3 style="font-weight: bold;">
-								Janeth López Cuervo
-							</h3>
-							<h3>
+								Janeth López Cuervo <br/>
 								Coordinador Nacional Talento Humano
 							</h3>
 							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
