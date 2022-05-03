@@ -429,7 +429,7 @@ class EmployeeFullName(models.Model):
         ('marketing', 'Marketing'),
         ('micronegocios', 'Micronegocios y emprendimiento'),
         ('regional_c_occ', 'Regional Centro Occidente'),
-        ('regional_c_or', 'Regional Centro Oriente'),
+        ('regional_c_or', 'Regional Centro Oriente')
     ], string='Centro de costo', default='unidad_central', tracking=True)
 
     '''def _colombia1(self):
