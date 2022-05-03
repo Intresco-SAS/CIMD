@@ -16,23 +16,13 @@
 				<t t-set="company" t-value="res_company"></t>
 			</t>
 
-			<!--  Employee Contract Report Custom Header -->
-			<div class="header">
-				<div>
-					<div>
-						<center>
-							<div>
-								<img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo"/>
-							</div>
-						</center>
-					</div>
-				</div>
-			</div>
-
 			<div class="article">
 				<div class="page">
-						<p class='text-center' style="font-size:28px;">
-							<center>
+					<center>
+						<div>
+							<img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo" style="margin-top:100px; max-height: 105px;"/>
+						</div>
+					</center>
 								<br/>
 								<br/>
 								<h3>
@@ -50,7 +40,7 @@
 									HACE CONSTAR<br/>
 								</h3>
 						    </center>
-							<h5>
+							<p>
 								Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
 								número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
                                 INDUSTRIAL MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde
@@ -67,16 +57,14 @@
 								<br/>
 								Se expide en Bogotá D.C., a los 19 días del mes de Octubre de 2020.
 								Cordialmente,<br/>
-							</h5>
+							</p>
 							<br/>
 							<br/>
 							<br/>
-							<h3 style="font-weight: bold;">
-								Janeth López Cuervo
-							</h3>
-							<h3>
+							<p style="font-weight: bold;">
+								Janeth López Cuervo <br/>
 								Coordinador Nacional Talento Humano
-							</h3>
+							</p>
 							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
 							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
 						</p>
