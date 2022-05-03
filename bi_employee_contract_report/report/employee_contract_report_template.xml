@@ -17,7 +17,7 @@
 			</t>
 
 			<div class="article">
-				<div class="header">
+				<div>
 					<center>
 						<div>
 							<img t-if="company.logo" t-att-src="image_data_uri(company.logo)" alt="Logo" style="margin-top:100px; max-height: 105px;"/>
