@@ -48,7 +48,7 @@
 									HACE CONSTAR<br/>
 								</h3>
 						    </center>
-							<h5>
+							<p>
 								Que <span t-field="o.employee_id.name" style="font-weight: bold;"/>, mayor de edad identificado(a) con <span t-field="o.employee_id.doctype"/>
 								número <span t-field="o.employee_id.identification_id"/>, se encuentra vinculado(a) a la CORPORACION
                                 INDUSTRIAL MINUTO DE DIOS mediante contrato laboral a <span t-field="o.contract_type_id"/> desde 
@@ -61,14 +61,14 @@
 								<br/>
 								Se expide en Bogotá D.C., a los 19 días del mes de Octubre de 2020.
 								Cordialmente,<br/>
-							</h5>
+							</p>
 							<br/>
 							<br/>
 							<br/>
-							<h3 style="font-weight: bold;">
+							<p style="font-weight: bold;">
 								Janeth López Cuervo <br/>
 								Coordinador Nacional Talento Humano
-							</h3>
+							</p>
 							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
 							<!--h1 style="color: #ff0066; font-weight: bold; font-size: 40px;"><span t-field="o.name"/></h1-->
 						</p>
