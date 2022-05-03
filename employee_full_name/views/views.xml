@@ -23,6 +23,9 @@
                 <xpath expr="//field[@name='job_title']" position="replace">
                         <field name="job_id" placeholder="Selecciona el cargo..."/>
                 </xpath>
+                <xpath expr="//field[@name='coach_id']" position="after">
+                        <field name="cost_center"/>
+                </xpath>
                 <xpath expr="//field[@name='department_id']" position="before">
                     <field name="sede" placeholder="Selecciona la sede..."/>
                 </xpath>

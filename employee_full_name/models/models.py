@@ -421,6 +421,17 @@ class EmployeeFullName(models.Model):
         #('union_libre', 'Union Libre'),
     ], string='Marital Status', default='cohabitant', tracking=True)
 
+    cost_center = fields.Selection([
+        ('unidad_central', 'Unidad Central'),
+        ('consultoria', 'Consultoría'),
+        ('formacion', 'Formación'),
+        ('planta_hermeco', 'Planta Hermeco'),
+        ('marketing', 'Marketing'),
+        ('micronegocios', 'Micronegocios y emprendimiento'),
+        ('regional_c_occ', 'Regional Centro Occidente'),
+        ('regional_c_or', 'Regional Centro Oriente'),
+    ], string='Centro de costo', default='unidad_central', tracking=True)
+
     '''def _colombia1(self):
         return self.env['res.country'].search([('code', '=', 'CO')]).id'''
 
