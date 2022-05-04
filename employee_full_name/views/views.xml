@@ -7,7 +7,6 @@
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
-
                 <xpath expr="//field[@name='category_ids']" position="replace">
                     <group>
                         <group>
@@ -33,22 +32,28 @@
                     <field name="address_id" placeholder="Selecciona la sede..."/>
                     <field name="work_location"/>
                 </xpath>
-                <!--xpath expr="//page[@name='public']" position="attributes">
-                    <attribute name="invisible">True</attribute>
-               </xpath-->
+                <xpath expr="//field[@name='address_id']" position="replace">
+                    <field name="work_address"/>
+                </xpath>
+                
                <xpath expr="//page[@name='personal_information']" position="replace">
                     <page string="Información personal"> 
                         <group>
                             <group string="Información de contacto">
-                                <field name="address_home_id" string="Dirección de residencia"/>
+                                <field name="address_home_id" context="{ 
+                                                                        'show_address': 1,  
+                                                                        'default_type': 'private',  
+                                                                        'form_view_ref': 'base.res_partner_view_form_private'}" 
+                                                                        options="{&quot;always_reload&quot;: True, &quot;highlight_first_line&quot;: True}" invisible="1"/>
+                                <field name="address_home" string="Dirección de residencia"/>
                                 <field name="neighborhood"/>
                                 <field name="city_re_id"/>
                                 <field name="estrato" string="Estrato"/>
                                 <field name="tipo_vivienda" string="Tipo de vivienda"/>
-                                <field name="private_email" string="Email personal"/>
+                                <field name="private_email" />
                                 <field name="phone" string="Telefono fijo"/>
                                 <field name="movil" string="Celular"/>
-                                <field name="bank_account_id" context="{'default_partner_id': address_home_id}" invisible="1"/>
+                                <field name="bank_account_id" context="{'default_partner_id': address_home}" invisible="1"/>
                                 <!--label for="km_home_work"/>
                                 <div class="o_row" name="div_km_home_work">
                                     <field name="km_home_work" groups="hr.group_hr_user"/>
@@ -69,9 +74,9 @@
                             <group string="Lugar y fecha de Nacimiento">
                                 <field name="birthday" />
                                 
-                                <field name="country_bornid"/>
-                                <field name="state_born_id"/>
-                                <field name="city_born_id"/>
+                                <field name="country_id"/>
+                                <field name="state_id"/>
+                                <field name="city_id"/>
                                 <field name="place_of_birth" invisible="1"/>
                                 <field name="country_of_birth" invisible="1"/>
                             </group>
@@ -81,7 +86,6 @@
                                 <field name="permit_no" invisible="1"/>
                                 <field name="visa_expire" invisible="1"/>
                             </group>
-                            
                             <!--group string="Dependant">
                                 <field name="children"/>
                             </group-->
@@ -95,17 +99,19 @@
                                 <field name="pasatiempos"/>
                                 <field name="voluntariados_asociaciones"/>
                                 <field name="mascotas"/>
-                                <field name="tipo_alimen"/>
+                                <field name="tipo_alimen" string="Tipo de alimentación"/>
                                 <field name="pasatiempo1" string="Pasa tiempo"/>
                             </group>
-                            <group string="Estado civil">
-                                <field name="marital"/>
-                                <field name="spouse_complete_name" attrs="{'invisible': [('marital', 'not in', ['married', 'cohabitant'])]}" groups="hr.group_hr_user"/>
-                                <field name="spouse_birthdate" attrs="{'invisible': [('marital', 'not in', ['married', 'cohabitant'])]}" groups="hr.group_hr_user"/>
+                            <group name="marital_status" string="Estado civil">
+                                <field name="marital1"/>
+                                <field name="spouse_complete_name" string="Nombre del cónyugue"
+                                attrs="{'invisible': [('marital1', 'not in', ['married', 'cohabitant'])]}" groups="hr.group_hr_user"/>
+                                <field name="spouse_birthdate" string="Fecha de nacimiento del cónyugue"
+                                attrs="{'invisible': [('marital1', 'not in', ['married', 'cohabitant'])]}" groups="hr.group_hr_user"/>
                             </group>
-                            <group string="Población vulnerable">
-                                <field name="Tipo_pobl_vul" string="Tipo de población vulnerable"/>
-                            </group>
+                            <group name="vulnerable_population" string="Población vulnerable">
+                                <field name="Tipo_pobl_vul1" string="Tipo de población vulnerable"/>
+                            </group>   
                             <group string="Education" invisible="1">
                                 <field name="certificate"/>
                                 <field name="study_field"/>
@@ -116,9 +122,10 @@
                                 <field name="city_id"/>
                             </group>
                         </group>
-                    
                     </page>
-                
+                </xpath>
+                <xpath expr="//field[@name='private_email']" position="replace">
+                    <field name="pers_email"/>
                 </xpath>
                 <xpath expr="//page[@name='hr_settings']" position="before">
                     <page name="inf_fa" string="Informacion familiar"> 
@@ -181,10 +188,6 @@
                         </group>
                     </page>
                 </xpath>
-                <xpath expr="//field[@name='marital']" position="after">
-                    <field name="marital1"/>
-                </xpath>
-                
             </field>
         </record>
     </data>

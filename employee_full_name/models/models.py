@@ -67,6 +67,21 @@ class EmployeeFullName(models.Model):
     state_id = fields.Many2one("res.country.state", help='Enter State', ondelete='restrict', string='Departamento de expedicion')
     country_id = fields.Many2one('res.country', string='Country', help='Select Country', ondelete='restrict')    
     city_id = fields.Many2one('res.country.state.city', help='Enter City', string='Municipio de expedicion')
+
+    @api.onchange('country_id')
+    def _onchange_country_id(self):
+        if self.country_id:
+            return {'domain': {'state_id': [('country_id', '=', self.country_id.id)]}}
+        else:
+            return {'domain': {'state_id': []}}
+   
+    @api.depends('state_id')
+    def _onchange_state_id(self):
+        if self.state_id:
+            return {'domain': {'city_id': [('state_id', '=', self.state_id.id)]}}
+        else:
+            return {'domain': {'city_id': []}}
+
     state_born_id = fields.Many2one("res.country.state",string='Departamento de nacimiento', help='Enter State', ondelete='restrict')
     country_bornid = fields.Many2one('res.country', string='Pais de nacimiento', help='Select Country', ondelete='restrict', default=lambda self: self.env['res.country'].browse([(49)]))    
     city_born_id = fields.Many2one('res.country.state.city', string='Municipio de nacimiento', help='Enter City')
@@ -90,6 +105,15 @@ class EmployeeFullName(models.Model):
                                      ('7', 'Enfermedades huérfanas'),
                                      ('8','Enfermedades catastróficas (Cáncer, VIH y renales)')]
                                     )
+    Tipo_pobl_vul1= fields.Selection([('1', 'Niños, niñas, adolescentes'),
+                                     ('2', 'Adultos mayores'),
+                                     ('3','Poblaciones en situación de discapacidad'),
+                                     ('4','Grupos étnicos'),
+                                     ('5', 'Víctimas'),
+                                     ('6', 'Enfermedades huérfanas'),
+                                     ('7','Enfermedades catastróficas (Cáncer, VIH y renales)')]
+                                    )
+    address_home = fields.Char()
     neighborhood = fields.Char(string='Barrio', copy=True)
     estrato = fields.Selection([('1', '1'),
                                 ('2', '2'),
@@ -420,7 +444,7 @@ class EmployeeFullName(models.Model):
         ('widower', 'Widower'),
         ('divorced', 'Divorced'),
         #('union_libre', 'Union Libre'),
-    ], string='Marital Status', default='cohabitant', tracking=True)
+    ], string='Estado civil', default='single', tracking=True)
 
     cost_center = fields.Selection([
         ('unidad_central', 'Unidad Central'),

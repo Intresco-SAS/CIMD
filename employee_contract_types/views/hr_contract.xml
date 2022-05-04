@@ -52,7 +52,7 @@
                         </group>
                         <group>
                             <field name="pais"/>
-                            <field name="tipo_decuenta"/>
+                            <field name="tipo_decuenta" string="Tipo de cuenta"/>
                         </group>
                     </group>
                 </page>

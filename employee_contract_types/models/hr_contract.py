@@ -4,7 +4,7 @@ from odoo import models, fields
 class HrContract(models.Model):
     _inherit = "hr.contract"
 
-    contract_type_id = fields.Many2one("hr.contract.type", string="Contract Type")
+    contract_type_id = fields.Many2one("hr.contract.type", string="Tipo de contratro")
     nivel_del_cargo = fields.Selection([('a', 'A')])
     resource_calendar_id = fields.Many2one("resource.calendar", string="Jornada laboral")
     project = fields.Many2one("project.project", string="proyecto")
