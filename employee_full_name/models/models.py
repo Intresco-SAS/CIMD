@@ -18,9 +18,7 @@ class HrEmployeePrivate(models.Model):
     country_id = fields.Many2one('res.country', string='Country', help='Select Country', ondelete='restrict')
     state_born_id = fields.Many2one("res.country.state",string='Departamento de nacimiento', help='Enter State', ondelete='restrict')
     country_bornid = fields.Many2one('res.country', string='Pais de nacimiento', help='Select Country', ondelete='restrict', default=lambda self: self.env['res.country'].browse([(49)]))
-    
-
-    
+     
 class EmployeeFullName(models.Model):
     _inherit = 'hr.employee'
     
@@ -38,6 +36,9 @@ class EmployeeFullName(models.Model):
             return {'domain': {'city_id': [('state_id', '=', self.state_id.id)]}}
         else:
             return {'domain': {'city_id': []}}
+
+    work_address = fields.Char(string='Dirección de trabajo')
+    pers_email = fields.Char(string="Email personal")
 
     emp_fname = fields.Char(string='Primer nombre', copy=True)
     emp_mname = fields.Char(string='Segundo nombre', copy=True)
@@ -458,7 +459,6 @@ class EmployeeFullName(models.Model):
             emp_name.name = (str(fname)+' '+str(mname)+' '+str(lname)+' '+str(slname)).title()
 
     # Dependent picklist code to show State based on selected Country colombia -> antioquia, cundinamarca,  etc..
-    
 
     # Show Hide State selection based on Country
     @api.depends('country_id')
