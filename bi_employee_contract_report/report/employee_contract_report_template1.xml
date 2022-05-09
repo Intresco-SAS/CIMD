@@ -62,7 +62,7 @@
 							<br/>
 							<br/>
 							<p style="font-weight: bold;">
-								<img t-attf-src="'/bi_employee_contract_report/static/description/img/Firma_Janeth.jepg'" width="100%" height="100%"/>
+								<img t-att-src="'/bi_employee_contract_report/static/description/img/Firma_Janeth.png'" width="100%" height="100%"/>
 								Janeth López Cuervo <br/>
 								Coordinador Nacional Talento Humano
 							</p>
