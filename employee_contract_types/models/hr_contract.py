@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields
+from datetime import date
 
 class HrContract(models.Model):
     _inherit = "hr.contract"

@@ -51,8 +51,8 @@
 								comunicarse al 3136304472.
 								<br/>
 								<br/>
-								Se expide en Bogotá D.C., a los 19 días del mes de Octubre de 2020.
-								Cordialmente,<br/>
+								Se expide en Bogotá D.C., a los <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d')"/> días del mes de <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%B')"/> de <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y')"/>.
+								<br/>Cordialmente,<br/>
 							</p>
 							<br/>
 							<br/>
