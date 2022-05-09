@@ -25,7 +25,8 @@
 	'auto_install': False,
 	'application': False,
 	"live_test_url":'https://youtu.be/rkdHXMB2pR4',
-	"images":['static/description/Banner.png'],
+	"images":['static/description/Banner.png',
+			  'static/description/Firma_Janeth.jpeg'],
 }
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
