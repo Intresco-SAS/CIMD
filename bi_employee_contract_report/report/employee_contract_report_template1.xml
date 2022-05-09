@@ -62,7 +62,11 @@
 							<br/>
 							<br/>
 							<p style="font-weight: bold;">
-								<img t-att-src="'/bi_employee_contract_report/static/description/img/Firma_Janeth.png'" width="100%" height="100%"/>
+								
+								<t t-if= "o.company_selection" t-set= "company_logo" t-value= "o.get_logo(o.company_selection)" /> 
+								<img t-if= "company.logo" t-att-src = "image_data_uri(company_logo)" style= "max-height: 45px;" 
+								alt= "Logotipo" /> 
+								
 								Janeth López Cuervo <br/>
 								Coordinador Nacional Talento Humano
 							</p>
