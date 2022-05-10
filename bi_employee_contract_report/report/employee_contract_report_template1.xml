@@ -62,9 +62,9 @@
 							<br/>
 							<br/>
 							<p style="font-weight: bold;">
-							
-								<img src = '/bi_employee_contract_report/static/description/Banner.png' style="margin-top:100px; max-height: 105px;"/> 
-								<br/>
+								<div class="col-3" style="padding: 30px; text-align: center; border: 2px solid white;border-radius: 25px; background: white">
+									<img src="bi_employee_contract_report/static/description/img/firma.png" style="max-height: 90px;"/>
+								</div>
 								Janeth López Cuervo <br/>
 								Coordinador Nacional Talento Humano
 							</p>
@@ -84,7 +84,7 @@
 						Bogotá D.C., Colombia https://mdc.org.co/
 					</center>
 				</div>
-			</div>
+			</div>https://www.odoo.com/forum/help-1/display-image-in-qweb-report-76746
 			<div style="page-break-before:always;"/>
 		</t>
 	</template>
