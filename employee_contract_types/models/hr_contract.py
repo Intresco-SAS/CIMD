@@ -58,6 +58,7 @@ class HrContract(models.Model):
                         ('skandia', 'Old Mutual (skandia)'),
                         ('oaplica', 'No aplica'),
                         ('positiva', 'POSITIVA'),
+                        ('colpensiones', 'Colpensiones'),
                         ]
     )
     eps = fields.Selection(string='EPS',
