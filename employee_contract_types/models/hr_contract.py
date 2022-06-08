@@ -57,6 +57,7 @@ class HrContract(models.Model):
                         ('rotección', 'Protección'),
                         ('skandia', 'Old Mutual (skandia)'),
                         ('oaplica', 'No aplica'),
+                        ('positiva', 'POSITIVA'),
                         ]
     )
     eps = fields.Selection(string='EPS',
@@ -93,6 +94,11 @@ class HrContract(models.Model):
                         ('Medimas', 'Medimas'),
                         ('MutualSer', 'Mutual Ser'),
                         ('Nuevaeps', 'Nueva eps'),
+                        ('sura', 'SURA'),
+                        ('sanitas', 'SANITAS'),   
+                        ('saludtotal', 'SALUD TOTAL'), 
+                        ('sos', 'SOS'), 
+                        ('saviasalud', 'SAVIA SALUD'), 
                         ]
     )
 
