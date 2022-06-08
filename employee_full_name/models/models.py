@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import string
 from odoo import models, fields, api
 from dateutil.relativedelta import relativedelta
 from odoo.exceptions import UserError, ValidationError
@@ -96,6 +97,16 @@ class EmployeeFullName(models.Model):
                                      ('ab','AB'),
                                      ('o','O')]
                                     )
+    
+    grupo_sangre1 = fields.Selection([('ap', 'A+'),
+                                     ('bp', 'B+'),
+                                     ('abp','AB+'),
+                                     ('op','O+'),
+                                     ('an', 'A-'),
+                                     ('bn', 'B-'),
+                                     ('abn','AB-'),
+                                     ('on','O-')])
+
     Tipo_pobl_vul= fields.Selection([('1', 'Niños, niñas, adolescentes'),
                                      ('2', 'Adultos mayores'),
                                      ('3','Poblaciones en situación de discapacidad'),

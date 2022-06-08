@@ -92,7 +92,7 @@
                             <group string="Emergencia">
                                 <field name="emergency_contact"/>
                                 <field name="emergency_phone" class="o_force_ltr"/>
-                                <field name="grupo_sangre"/>
+                                <field name="grupo_sangre1" string="Grupo de sangre"/>
                             </group>
                             <group string="Información adicional">
                                 <field name="premios"/>
