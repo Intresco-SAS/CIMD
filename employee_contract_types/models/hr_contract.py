@@ -6,7 +6,17 @@ class HrContract(models.Model):
     _inherit = "hr.contract"
 
     contract_type_id = fields.Many2one("hr.contract.type", string="Tipo de contratro")
-    nivel_del_cargo = fields.Selection([('a', 'A')])
+    nivel_del_cargo = fields.Selection([
+                                        ('asistente', 'ASISTENTE'),
+                                        ('gerente', 'GERENTE'),
+                                        ('director', 'DIRECTOR'),
+                                        ('gerentegeneral', 'GERENTE GENERAL'),
+                                        ('profesional', 'PROFESIONAL'),
+                                        ('aprendiz', 'APRENDIZ'),
+                                        ('analista', 'ANALISTA'),
+                                        ('cordiconsul', 'COORDINADOR/CONSULTOR'),
+                                        ('tecnico', 'TÉCNICO')
+                                       ])
     resource_calendar_id = fields.Many2one("resource.calendar", string="Jornada laboral")
     project = fields.Many2one("project.project", string="proyecto")
     honorarios = fields.Float(string="Hononarios")
