@@ -1,6 +1,9 @@
 from odoo import _, api, fields, models, tools
 import locale
 import datetime
+import logging
+
+_logger = logging.getLogger(__name__)
 
 TRANS_MONTH = {'january' : 'Enero',
                'november' : 'Noviembre'}
@@ -13,5 +16,5 @@ class HrContract(models.Model):
 
     def print_date(self):
         month = datetime.datetime.today().strftime('%B')
-        print(month)
+        _logger.info(month)
         return TRANS_MONTH.get(month,month)
