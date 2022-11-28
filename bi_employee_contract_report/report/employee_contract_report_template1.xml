@@ -55,7 +55,7 @@
 								comunicarse al 3136304472.
 								<br/>
 								<br/>
-								Se expide en Bogotá D.C., a los <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d')"/> días del mes de <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%B')"/> de <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y')"/>.
+								Se expide en Bogotá D.C., a los <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%d')"/> días del mes de <span t-esc="o.print_date()"/> de <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y')"/>.
 								<br/>Cordialmente,<br/>
 							</p>
 							<br/>

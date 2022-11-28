@@ -5,7 +5,17 @@ import logging
 
 _logger = logging.getLogger(__name__)
 
-TRANS_MONTH = {'january' : 'Enero',
+TRANS_MONTH = {'January' : 'Enero',
+               'February' : 'Febrero',
+               'March' : 'Marzo',
+               'April' : 'Abril',
+               'May' : 'Mayo',
+               'June' : 'junio',
+               'July' : 'Julio',
+               'August' : 'Agosto',
+               'September' : 'Septiembre',
+               'Octuber' : 'Octubre',
+               'December' : 'Diciembre',
                'November' : 'Noviembre'}
 
 class HrContract(models.Model):
