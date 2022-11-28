@@ -6,7 +6,7 @@ import logging
 _logger = logging.getLogger(__name__)
 
 TRANS_MONTH = {'january' : 'Enero',
-               'november' : 'Noviembre'}
+               'November' : 'Noviembre'}
 
 class HrContract(models.Model):
 
